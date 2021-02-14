@@ -1,6 +1,8 @@
 $color: #000000
 $hover: all .2s ease-in-out
 $code: monospace
+$width-md: 768px
+$width-sm: 411px
 
 =transition($property)
   -webkit-transition: $property
@@ -25,11 +27,13 @@ h1, h2, h3
   width: 230px
   color: $color
 
+  @media screen and (max-width: $width-sm) 
+    display: none
+
 h1, h2
   font-size: 1.5em
   font-weight: 700
   line-height: 1
-  display: inline-block
   margin-top: -3px
 
 h3
@@ -66,6 +70,9 @@ header
 
   nav
     padding-top: 1em
+
+    @media screen and (max-width: $width-sm)
+      display: none
             
     li
       display: inline
@@ -162,6 +169,9 @@ section
   width: 230px
   font-weight: 300
   cursor: default
+
+  @media screen and (max-width: $width-sm) 
+    display: none
    
 
 
