@@ -1,0 +1,182 @@
+$color: #000000
+$hover: all .2s ease-in-out
+$code: monospace
+
+=transition($property)
+  -webkit-transition: $property
+  -ms-transition: $property
+  transition: $property
+
+
+//------------------------------------------
+
+
+body
+  background: white
+  color: rgba($color, .5)
+  font-size: 16px
+  font-family: 'Lato', sans-serif
+  line-height: 1.4
+  letter-spacing: .025em
+
+h1, h2, h3
+  text-align: right
+  margin: 0 40px 0 0
+  width: 230px
+  color: $color
+
+h1, h2
+  font-size: 1.5em
+  font-weight: 700
+  line-height: 1
+  display: inline-block
+  margin-top: -3px
+
+h3
+  font-size: 1em
+  font-weight: 400
+           
+a
+  color: rgba($color, .5)
+  text-decoration: none
+  +transition($hover)
+
+  &:hover
+    color: $color
+
+span
+  color: rgba($color,.2)
+  font-weight: 300
+
+  
+
+// Nav ---------------------------------------- 
+header
+  background: rgba(white, .9) 
+  box-sizing: border-box
+  padding: 0 1em 1em
+  width: 100%
+  position: fixed
+  top: 0
+  display: inline-flex
+  justify-content: space-between
+
+  img 
+    padding-top: 1em
+
+  nav
+    padding-top: 1em
+            
+    li
+      display: inline
+      margin-right: .5em
+      font-size: .95em
+
+      &:after
+        content: '|'
+        color: rgba($color, .2)
+        margin-left: .5em
+        font-weight: 300
+
+      &:last-child
+        margin-right: 0
+
+        &:after
+          display: none
+
+
+
+// Main ---------------------------------------- 
+main
+  max-width: 960px
+  padding: 1em
+  margin: 0 auto 1em      
+         
+section
+  padding-top:7em
+  display: inline-flex
+  flex-wrap: wrap
+
+  & > div
+    display: inline-flex
+    margin-bottom: 2em
+
+
+  ul
+    list-style: none
+    width: 180px
+
+    li
+      margin-bottom: 1.25em
+
+.symbol
+  color: $color
+  text-align: center
+  width: 60px
+  margin-right: 2.25em
+
+  li
+
+    &:before,
+    &:after
+      color: rgba($color, .2)
+      font-weight: 300
+
+    &:before
+      content: '['
+      margin-right: 5px
+
+    &:after
+      content: ']'
+      margin-left: 5px
+
+  code
+    +transition($hover)
+
+    &:hover,
+    &:active,
+    &:focus
+      background: rgba($color,.05)
+
+.word, .number
+  width: 100px
+
+  code
+    font-family: $code
+    vertical-align: bottom
+    +transition($hover)
+
+    &:hover,
+    &:active,
+    &:focus
+      color: $color
+      background: rgba($color,.05)
+
+.word
+  margin-right: 2em
+
+.number
+  margin-right: 1.75em
+
+.name
+  width: 230px
+  font-weight: 300
+  cursor: default
+   
+
+
+// Footer ----------------------------------------
+footer
+  font-size: .75em  
+  color: rgba($color, .5)
+  margin: 7em 1em 1em
+
+  a
+    color: rgba($color, .5)
+  
+    &:hover
+      color: red
+  
+  
+
+
