@@ -2,4 +2,4 @@
 
 Quickly find and copy ASCII characters
 
-[easyascii.com](http://easyascii.com)
+[easyascii.com](https://easyascii.com)

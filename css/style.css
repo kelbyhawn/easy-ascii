@@ -1,411 +1,171 @@
-body{
-	font-size:1em;
-	font-family:'Open Sans', sans-serif;
-	font-weight: 400;	
-	color:#555;
-	letter-spacing: 0.105em;
-}
-    .wrapper{
-        max-width:1000px;
-        padding:2em 1em 3em;
-        margin: 0 auto;
-    }
-        .inside{
-        	margin: -2em auto 4em;
-        	width: 820px;
-        }
-
-
-h1,h2,h3{
-	font-weight: 600;
-	margin: 1em 0;
-	color:#333;
-}
-    h1{
-    	font-size: 1.25em;
-    }
-        h2{
-        	font-size: 1.25em;
-        	line-height: 1.1em;
-        }
-            h3{
-            	font-size: 1em;
-            	margin-bottom: 1em;
-            	font-weight: 400;
-            	color:#444;
-            }
-
-
-a{
-	color:#444;
-	text-decoration: none;
-	transition: color .25s ease-in-out;
-	-webkit-transition:  color .25s ease-in-out;
-	-moz-transition:  color .25s ease-in-out;
-}
-	a:hover{
-		color:#333;
-	}
-	
-	
-/* –––––––––NAV–––––––– */	
-
-
-.mobile-logo{
-	display: none;
+body {
+  background: white;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.025em;
 }
 
-.logo{
-	position: fixed;
-	top: 0;
-	padding: 0;
-	margin: 0;
-	float: left;
+h1, h2, h3 {
+  text-align: right;
+  margin: 0 40px 0 0;
+  width: 230px;
+  color: #000000;
 }
 
-	.logo h1{
-		color: #444;
-		cursor: default;
-		line-height: 1.15em;
-	}
-		.logo h1 a{
-			color:#444;
-			transition: color .25s ease-in-out;
-			-webkit-transition:  color .25s ease-in-out;
-			-moz-transition:  color .25s ease-in-out
-		}					
-			.logo h1 a:hover{
-				color:#000;
-            }					
-           		.logo h1 span{
-        			font-weight:300;
-        			font-size: 1.25em;
-        			position: relative;
-        			vertical-align: bottom;
-        			margin-right: -.25em;
-        		}
-		
-    .logo img,
-    .mobile-logo img{
-        width: 30px;
-        vertical-align: middle;
-    }
-        .mobile-logo img{
-	        width: 60px;
-        }
-			
-			
-		
-.nav{
-	position:fixed;
-	top:0;
-	width: 965px;
-	padding: 1.15em 0 1em;
-	font-size:.9em;
-	background: rgba(255,255,255,.95);
-	border-bottom: 1px solid white;	
-}
-						
-	.nav ul{
-		float:right;
-		padding-top: .5em;
-	}
-
-		.nav li{
-			display: inline;
-			margin-left: 1.25em;
-		}
-		
-			.nav li:last-child{
-				margin-right:0;
-			}
-			
-			
-.popular, .punctuation, .arrows, .accent-char, .math, .greek, .fun{
-	padding-top:7em;
-}
-	
-
-/* –––––––––LIST–––––––– */
-
-ul{
-	list-style: none;
+h1, h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  margin-top: -3px;
 }
 
-	li{
-		margin-bottom:20px;
-	}
-	
-		li span{
-			color: #e2e2e2;
-			font-weight: 300;
-		}
-
-
-/* –––––––––TABLE–––––––– */
-
-tr ul{
-	padding-left:2em;
-}
-    .sec-title{
-    	padding-right: 2.25em;
-    	text-align: right;
-    	width:180px;
-    }
-        .sec-title li{
-        	margin-bottom:0;
-        	}
-
-    .symbol{
-    	width:50px;
-    }
-        .symbol ul{
-        	text-align: center;
-        	padding: 0;
-        	color:#000;
-        }
-    
-    
-    .word{
-    	width:135px;		
-    }
-    	.word li:hover, .word li:active{
-    		color:#222;
-    	}
-    
-    .number{
-    	width:120px;
-    	color: #777;
-    }	
-    	.number li:hover, .number li:active{
-    		color:#444;
-    	}
-    
-    .name ul{
-    	text-align: left;
-    	color:#555;
-    	font-weight:300;
-    }
-
-
-
-/* –––––––––FOOTER–––––––– */
-
-#copyright p{
-	font-size: .75em;
-	padding: 3em 0 0;
-	font-weight: 300;
-}	
-	#copyright a:hover{
-		color:#f39c9c;
-	}
-
-    .social{
-    	float:right;
-    	margin-top: -1em;
-    }
-    	.social .twitter{
-    		margin-right: 10px;
-    		float:left;
-    	}
-    	.social .fb-like{
-    		float:right;
-    	}
-	
-
-
-/* iPad ----------------------- */
- 
-/* Minimum width of 768 pixels. */
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-
-body{
-	font-size: 1.25em;
-}
-    .wrapper{
-    	padding:1.5em 1.5em;
-    }
-        .inside{
-        	margin: 0 auto;
-        	width: auto;
-        }
-
-.nav{
-	font-size:.75em;
-	padding:1.3em 0 2.25em;
+h3 {
+  font-size: 1em;
+  font-weight: 400;
 }
 
-	.nav .logo{
-		top:-.05em;
-	}
-
-	.nav ul{
-		font-size:1em;
-		position:fixed;
-		right:2em;
-		letter-spacing: .05em;
-		padding-top:.15em;
-	}
-    	.nav li{
-    		margin-left:.55em;
-    	}
-       		.nav li:last-child{
-    			margin-right:0;
-    		}
-
-    .symbol ul{
-    	width:75px;
-    }
-    
-    .word ul{
-    	width:125px;
-    }
-    
-    .name{
-    	display: none;
-    }
-    
-    .popular, .punctuation, .arrows, .accent-char, .math, .greek, .fun{
-    	padding-top:6em;
-    }
-    
-    
-    #copyright p{
-    	font-weight:400;
-    	letter-spacing: 0;
-    }
-    
-    	#copyright a{
-    		font-weight: 400;
-    	}
-
+a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: #000000;
 }
 
-
-
-/* Mobile ----------------------- */
-
-@media only screen 
-and (min-width : 320px) and (max-width: 767px)	 {
-
-    body{
-    	font-size: 1.5em;
-    }
-  
-        .wrapper{
-        	clear: both;
-        	display: block;
-        }
-    
-    .inside{
-    	width: 100%;
-    	margin:1em 0 2em;
-    }
-    
-    .mobile-logo{
-    	display: block;
-    	margin:-1em 0 0;
-    	text-align: center;
-    }
-    					
-    	.mobile-logo h1 a{
-    		font-size:1.25em;
-    		color:#000;
-    		}
-    		
-    		.mobile-logo h1 span{
-    			margin-right:-.25em;
-    		}
-    		
-    .logo{
-        display: none;
-    }
-        
-    .nav{
-    	display: none;
-    }
-    
-    h2, h3{
-    	display: none;
-    }
-    
-    table{
-    	width: auto;
-    	display: block;
-    }
-     
-    .popular, .punctuation, .arrows, .accent-char, .math, .greek, .fun{
-    	padding-top: 1.5em;
-    }
-    
-    	.sec-title{
-    		display: none;
-    	}
-    	
-    	.symbol ul{
-    		width:4em;
-    	}
-    	
-    	.word{
-    		display: none;
-    	}
-    	
-    	.number ul{
-    		padding-left:1.5em;
-    	}
-    	
-    	.name{
-    		display: none;
-    		clear:both;
-    	}
-       
-    
-    #copyright p{
-    	font-size: 14px;
-    	line-height: 1.5em;
-    	letter-spacing: normal;
-    }
-    
-    .social{
-    	float: left;
-    	margin:1.5em 0;
-    }    
-        .social .fb-like{
-            margin-top: -3px;
-        }
-
+span {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 300;
 }
 
-
-
-/* Mobile Landscape ----------*/
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-    .popular, .punctuation, .arrows, .accent-char, .math, .greek, .fun{
-    	padding: 2em 0 0;
-    	margin:0;
-    }
-    
-    .word{
-    	display: block;
-    	width:125px;
-    	padding-left:0;
-    }
-    
-    .number{
-    	padding-left: 3em;
-    	width:100%;
-    }
-    
-    #copyright p{
-    	width:100%;
-    	font-size:.75em;
-    	letter-spacing: normal;
-    }
-
-
+header {
+  background: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  padding: 0 1em 1em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: inline-flex;
+  justify-content: space-between;
 }
+header img {
+  padding-top: 1em;
+}
+header nav {
+  padding-top: 1em;
+}
+header nav li {
+  display: inline;
+  margin-right: 0.5em;
+  font-size: 0.95em;
+}
+header nav li:after {
+  content: "|";
+  color: rgba(0, 0, 0, 0.2);
+  margin-left: 0.5em;
+  font-weight: 300;
+}
+header nav li:last-child {
+  margin-right: 0;
+}
+header nav li:last-child:after {
+  display: none;
+}
+
+main {
+  max-width: 960px;
+  padding: 1em;
+  margin: 0 auto 1em;
+}
+
+section {
+  padding-top: 7em;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+section > div {
+  display: inline-flex;
+  margin-bottom: 2em;
+}
+section ul {
+  list-style: none;
+  width: 180px;
+}
+section ul li {
+  margin-bottom: 1.25em;
+}
+
+.symbol {
+  color: #000000;
+  text-align: center;
+  width: 60px;
+  margin-right: 2.25em;
+}
+.symbol li:before, .symbol li:after {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+}
+.symbol li:before {
+  content: "[";
+  margin-right: 5px;
+}
+.symbol li:after {
+  content: "]";
+  margin-left: 5px;
+}
+.symbol code {
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.symbol code:hover, .symbol code:active, .symbol code:focus {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.word, .number {
+  width: 100px;
+}
+.word code, .number code {
+  font-family: monospace;
+  vertical-align: bottom;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.word code:hover, .word code:active, .word code:focus, .number code:hover, .number code:active, .number code:focus {
+  color: #000000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.word {
+  margin-right: 2em;
+}
+
+.number {
+  margin-right: 1.75em;
+}
+
+.name {
+  width: 230px;
+  font-weight: 300;
+  cursor: default;
+}
+
+footer {
+  font-size: 0.75em;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 7em 1em 1em;
+}
+footer a {
+  color: rgba(0, 0, 0, 0.5);
+}
+footer a:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
