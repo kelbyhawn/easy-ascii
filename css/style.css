@@ -13,7 +13,7 @@ h1, h2, h3 {
   width: 230px;
   color: #000000;
 }
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 768px) {
   h1, h2, h3 {
     display: none;
   }
@@ -99,7 +99,7 @@ section {
 }
 section > div {
   display: inline-flex;
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
 }
 section ul {
   list-style: none;
