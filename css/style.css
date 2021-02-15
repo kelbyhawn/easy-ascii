@@ -66,7 +66,7 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   header {
     display: block;
     padding: 0;
@@ -75,7 +75,7 @@ header {
 header img {
   padding-top: 1em;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   header img {
     padding-left: 0.9em;
   }
@@ -84,7 +84,7 @@ header nav {
   padding-top: 1em;
   position: relative;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   header nav {
     height: 2em;
     white-space: nowrap;
@@ -106,7 +106,7 @@ header nav li {
     font-size: 0.85em;
   }
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   header nav li:first-child {
     margin-left: 16px;
   }
@@ -114,12 +114,12 @@ header nav li {
 header nav li:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   header nav li:last-child {
     margin-right: 32px;
   }
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   header .overlay {
     pointer-events: none;
     content: "";
@@ -216,7 +216,7 @@ section ul li {
 .number {
   margin-right: 1.75em;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   .number {
     margin-right: 0;
   }
@@ -227,7 +227,7 @@ section ul li {
   font-weight: 300;
   cursor: default;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 688px) {
   .name {
     display: none;
   }
