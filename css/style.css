@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: white;
   color: rgba(0, 0, 0, 0.5);
@@ -11,11 +15,14 @@ h1, h2, h3 {
   text-align: right;
   margin: 0 40px 0 0;
   width: 230px;
-  color: #000000;
+  color: black;
 }
 @media screen and (max-width: 768px) {
   h1, h2, h3 {
-    display: none;
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5em;
+    text-align: left;
   }
 }
 
@@ -39,7 +46,7 @@ a {
   transition: all 0.2s ease-in-out;
 }
 a:hover {
-  color: #000000;
+  color: black;
 }
 
 span {
@@ -59,43 +66,84 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+@media screen and (max-width: 425px) {
+  header {
+    display: block;
+    padding: 0;
+  }
+}
 header img {
   padding-top: 1em;
 }
+@media screen and (max-width: 425px) {
+  header img {
+    padding-left: 0.9em;
+  }
+}
 header nav {
   padding-top: 1em;
+  position: relative;
 }
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 425px) {
   header nav {
+    height: 2em;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  header nav::-webkit-scrollbar {
     display: none;
   }
 }
 header nav li {
   display: inline;
-  margin-right: 0.5em;
-  font-size: 0.95em;
+  margin-right: 1.5em;
+  font-size: 0.9em;
 }
-header nav li:after {
-  content: "|";
-  color: rgba(0, 0, 0, 0.2);
-  margin-left: 0.5em;
-  font-weight: 300;
+@media screen and (max-width: 768px) {
+  header nav li {
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 425px) {
+  header nav li:first-child {
+    margin-left: 16px;
+  }
 }
 header nav li:last-child {
   margin-right: 0;
 }
-header nav li:last-child:after {
-  display: none;
+@media screen and (max-width: 425px) {
+  header nav li:last-child {
+    margin-right: 32px;
+  }
+}
+@media screen and (max-width: 425px) {
+  header .overlay {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    z-index: 100;
+    height: 1em;
+    top: 4em;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: -moz-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 93%, white 100%);
+    background: -webkit-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 93%, white 100%);
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 93%, white 100%);
+  }
 }
 
 main {
   max-width: 960px;
-  padding: 1em;
+  padding: 0 1em;
   margin: 0 auto 1em;
 }
 
 section {
-  padding-top: 7em;
+  padding-top: 10em;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-wrap: wrap;
@@ -104,7 +152,12 @@ section {
 section > div {
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin: 0 auto 2em;
+  margin: 0 0 2em;
+}
+@media screen and (max-width: 768px) {
+  section > div {
+    margin: 0 auto 2em;
+  }
 }
 section ul {
   list-style: none;
@@ -115,7 +168,7 @@ section ul li {
 }
 
 .symbol {
-  color: #000000;
+  color: black;
   text-align: center;
   width: 60px;
   margin-right: 2.25em;
@@ -152,7 +205,7 @@ section ul li {
   transition: all 0.2s ease-in-out;
 }
 .word code:hover, .word code:active, .word code:focus, .number code:hover, .number code:active, .number code:focus {
-  color: #000000;
+  color: black;
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -163,13 +216,18 @@ section ul li {
 .number {
   margin-right: 1.75em;
 }
+@media screen and (max-width: 425px) {
+  .number {
+    margin-right: 0;
+  }
+}
 
 .name {
   width: 230px;
   font-weight: 300;
   cursor: default;
 }
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 425px) {
   .name {
     display: none;
   }
@@ -179,6 +237,11 @@ footer {
   font-size: 0.75em;
   color: rgba(0, 0, 0, 0.5);
   margin: 7em 1em 1em;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 0;
+  }
 }
 footer a {
   color: rgba(0, 0, 0, 0.5);

@@ -1,8 +1,8 @@
-$color: #000000
+$color: black
 $hover: all .2s ease-in-out
 $code: monospace
 $width-md: 768px
-$width-sm: 411px
+$width-sm: 425px
 
 =transition($property)
   -webkit-transition: $property
@@ -12,6 +12,9 @@ $width-sm: 411px
 
 //------------------------------------------
 
+
+html
+  scroll-behavior: smooth
 
 body
   background: white
@@ -28,7 +31,10 @@ h1, h2, h3
   color: $color
 
   @media screen and (max-width: $width-md) 
-    display: none
+    width: 100%
+    display: block
+    margin-bottom: 1.5em
+    text-align: left
 
 h1, h2
   font-size: 1.5em
@@ -67,53 +73,85 @@ header
   -ms-flex-pack: justify
   justify-content: space-between
 
+  @media screen and (max-width: $width-sm)
+    display: block
+    padding: 0
+
   img 
     padding-top: 1em
 
+    @media screen and (max-width: $width-sm)
+      padding-left: .9em
+
   nav
     padding-top: 1em
+    position: relative
 
     @media screen and (max-width: $width-sm)
-      display: none
+      height: 2em
+      white-space: nowrap
+      overflow-x: auto
+      overflow-y: hidden
+      -webkit-overflow-scrolling: touch
+
+      &::-webkit-scrollbar
+        display: none
             
     li
       display: inline
-      margin-right: .5em
-      font-size: .95em
+      margin-right: 1.5em
+      font-size: .9em
 
-      &:after
-        content: '|'
-        color: rgba($color, .2)
-        margin-left: .5em
-        font-weight: 300
+      @media screen and (max-width: $width-md)
+        font-size: .85em
+
+      @media screen and (max-width: $width-sm)
+        &:first-child
+          margin-left: 16px
 
       &:last-child
         margin-right: 0
 
-        &:after
-          display: none
+        @media screen and (max-width: $width-sm)
+          margin-right: 32px
+
+  @media screen and (max-width: $width-sm)
+    .overlay
+      pointer-events: none /* ignore clicks */
+      content: ""
+      position: absolute
+      z-index: 100
+      height: 1em
+      top: 4em
+      right: 0
+      bottom: 0
+      width: 100%
+      background: -moz-linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
+      background: -webkit-linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
+      background: linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
 
 
 
 // Main ---------------------------------------- 
 main
   max-width: 960px
-  padding: 1em
+  padding: 0 1em
   margin: 0 auto 1em      
          
 section
-  padding-top:7em
+  padding-top: 10em
   display: -ms-inline-flexbox
   display: inline-flex
   -ms-flex-wrap: wrap
   flex-wrap: wrap
 
-
   & > div
     display: -ms-inline-flexbox
     display: inline-flex
-    margin: 0 auto 2em
+    margin: 0 0 2em
 
+    @media screen and (max-width: $width-md) 
+      margin: 0 auto 2em
 
   ul
     list-style: none
@@ -171,6 +209,9 @@ section
 .number
   margin-right: 1.75em
 
+  @media screen and (max-width: $width-sm) 
+    margin-right: 0
+
 .name
   width: 230px
   font-weight: 300
@@ -186,6 +227,9 @@ footer
   font-size: .75em  
   color: rgba($color, .5)
   margin: 7em 1em 1em
+
+  @media screen and (max-width: $width-md) 
+    margin-top: 0
 
   a
     color: rgba($color, .5)
