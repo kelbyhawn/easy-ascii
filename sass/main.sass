@@ -2,7 +2,7 @@ $color: black
 $hover: all .2s ease-in-out
 $code: monospace
 $width-md: 768px
-$width-sm: 411px
+$width-sm: 425px
 
 =transition($property)
   -webkit-transition: $property
@@ -108,12 +108,13 @@ section
   -ms-flex-wrap: wrap
   flex-wrap: wrap
 
-
   & > div
     display: -ms-inline-flexbox
     display: inline-flex
-    margin: 0 auto 2em
+    margin: 0 0 2em
 
+    @media screen and (max-width: $width-md) 
+      margin: 0 auto 2em
 
   ul
     list-style: none
@@ -186,6 +187,9 @@ footer
   font-size: .75em  
   color: rgba($color, .5)
   margin: 7em 1em 1em
+
+  @media screen and (max-width: $width-md) 
+    margin-top: 0
 
   a
     color: rgba($color, .5)
