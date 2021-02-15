@@ -73,7 +73,7 @@ header
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: $width-sm) and (orientation: portrait)
     display: block
     padding: 0
 
@@ -87,7 +87,7 @@ header
     padding-top: 1em
     position: relative
 
-    @media screen and (max-width: $width-sm)
+    @media screen and (max-width: $width-sm) and (orientation: portrait)
       height: 2em
       white-space: nowrap
       overflow-x: auto
