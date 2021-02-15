@@ -17,7 +17,7 @@ h1, h2, h3 {
   width: 230px;
   color: black;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   h1, h2, h3 {
     width: 100%;
     display: block;
@@ -101,7 +101,7 @@ header nav li {
   margin-right: 1.5em;
   font-size: 0.9em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   header nav li {
     font-size: 0.85em;
   }
@@ -154,7 +154,7 @@ section > div {
   display: inline-flex;
   margin: 0 0 2em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   section > div {
     margin: 0 auto 2em;
   }
@@ -238,7 +238,7 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   margin: 7em 1em 1em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   footer {
     margin-top: 0;
   }
