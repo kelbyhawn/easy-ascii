@@ -31,7 +31,10 @@ h1, h2, h3
   color: $color
 
   @media screen and (max-width: $width-md) 
-    display: none
+    width: 100%
+    display: block
+    margin-bottom: 1.5em
+    text-align: left
 
 h1, h2
   font-size: 1.5em
@@ -174,6 +177,9 @@ section
 
 .number
   margin-right: 1.75em
+
+  @media screen and (max-width: $width-sm) 
+    margin-right: 0
 
 .name
   width: 230px
