@@ -130,9 +130,9 @@ header nav li:last-child {
     right: 0;
     bottom: 0;
     width: 100%;
-    background: -moz-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 96%, white 100%);
-    background: -webkit-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 96%, white 100%);
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 96%, white 100%);
+    background: -moz-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 93%, white 100%);
+    background: -webkit-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 93%, white 100%);
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 93%, white 100%);
   }
 }
 
