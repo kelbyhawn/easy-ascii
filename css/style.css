@@ -66,33 +66,74 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+@media screen and (max-width: 425px) {
+  header {
+    display: block;
+    padding: 0;
+  }
+}
 header img {
   padding-top: 1em;
 }
+@media screen and (max-width: 425px) {
+  header img {
+    padding-left: 0.9em;
+  }
+}
 header nav {
   padding-top: 1em;
+  position: relative;
 }
 @media screen and (max-width: 425px) {
   header nav {
+    height: 2em;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  header nav::-webkit-scrollbar {
     display: none;
   }
 }
 header nav li {
   display: inline;
-  margin-right: 0.5em;
-  font-size: 0.95em;
+  margin-right: 1.5em;
+  font-size: 0.9em;
 }
-header nav li:after {
-  content: "|";
-  color: rgba(0, 0, 0, 0.2);
-  margin-left: 0.5em;
-  font-weight: 300;
+@media screen and (max-width: 768px) {
+  header nav li {
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 425px) {
+  header nav li:first-child {
+    margin-left: 16px;
+  }
 }
 header nav li:last-child {
   margin-right: 0;
 }
-header nav li:last-child:after {
-  display: none;
+@media screen and (max-width: 425px) {
+  header nav li:last-child {
+    margin-right: 32px;
+  }
+}
+@media screen and (max-width: 425px) {
+  header .overlay {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    z-index: 100;
+    height: 1em;
+    top: 4em;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: -moz-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 96%, white 100%);
+    background: -webkit-linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 96%, white 100%);
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 96%, white 100%);
+  }
 }
 
 main {
