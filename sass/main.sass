@@ -2,7 +2,7 @@ $color: black
 $hover: all .2s ease-in-out
 $code: monospace
 $width-md: 992px
-$width-sm: 688px
+$width-sm: 640px
 
 =transition($property)
   -webkit-transition: $property
@@ -73,7 +73,7 @@ header
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: $width-sm) 
     display: block
     padding: 0
 
@@ -104,6 +104,9 @@ header
 
       @media screen and (max-width: $width-md)
         font-size: .85em
+
+      @media only screen and (min-width: $width-sm) and (max-width: 767.98px)
+        font-size: .75em
 
       @media screen and (max-width: $width-sm)
         &:first-child
