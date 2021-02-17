@@ -4,7 +4,7 @@ html {
 
 body {
   background: white;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.66);
   font-size: 16px;
   font-family: "Lato", sans-serif;
   line-height: 1.4;
@@ -39,7 +39,7 @@ h3 {
 }
 
 a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.66);
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -196,7 +196,7 @@ section ul li {
   transition: all 0.2s ease-in-out;
 }
 .symbol code:hover, .symbol code:active, .symbol code:focus {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .word, .number {
@@ -211,7 +211,7 @@ section ul li {
 }
 .word code:hover, .word code:active, .word code:focus, .number code:hover, .number code:active, .number code:focus {
   color: black;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .word {
@@ -240,7 +240,7 @@ section ul li {
 
 footer {
   font-size: 0.75em;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.66);
   margin: 7em 1em 1em;
 }
 @media screen and (max-width: 992px) {
@@ -249,7 +249,7 @@ footer {
   }
 }
 footer a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.66);
 }
 footer a:hover {
   color: red;
