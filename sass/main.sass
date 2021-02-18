@@ -23,6 +23,8 @@ body
   font-family: 'Lato', sans-serif
   line-height: 1.4
   letter-spacing: .025em
+  -webkit-text-size-adjust: none
+  text-size-adjust: none
 
 h1, h2, h3
   text-align: right
@@ -105,9 +107,6 @@ header
 
       @media screen and (max-width: $width-md)
         font-size: .85em
-
-      @media only screen and (min-width: $width-sm) and (max-width: 767.98px)
-        font-size: .5em
 
       @media screen and (max-width: $width-sm)
         &:first-child
