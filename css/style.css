@@ -56,6 +56,17 @@ span {
   font-weight: 300;
 }
 
+code {
+  font-family: monospace;
+  vertical-align: bottom;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+code:hover, code:active, code:focus {
+  background: rgba(0, 0, 0, 0.09);
+}
+
 header {
   background: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
@@ -188,28 +199,13 @@ section ul li {
   content: "]";
   margin-left: 5px;
 }
+
 .symbol code {
-  -webkit-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.symbol code:hover, .symbol code:active, .symbol code:focus {
-  background: rgba(0, 0, 0, 0.2);
+  font-family: "Lato", sans-serif;
 }
 
 .word, .number {
   width: 100px;
-}
-.word code, .number code {
-  font-family: monospace;
-  vertical-align: bottom;
-  -webkit-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.word code:hover, .word code:active, .word code:focus, .number code:hover, .number code:active, .number code:focus {
-  color: black;
-  background: rgba(0, 0, 0, 0.09);
 }
 
 .word {

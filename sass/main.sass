@@ -1,6 +1,8 @@
 $color: black
-$hover: all .2s ease-in-out
+$font-family: 'Lato', sans-serif
 $code: monospace
+$hover: all .2s ease-in-out
+$gradient: to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%
 $width-md: 992px
 $width-sm: 640px
 
@@ -20,7 +22,7 @@ body
   background: white
   color: rgba($color, .66)
   font-size: 16px
-  font-family: 'Lato', sans-serif
+  font-family: $font-family
   line-height: 1.4
   letter-spacing: .025em
   -webkit-text-size-adjust: none
@@ -59,6 +61,16 @@ a
 span
   color: rgba($color,.2)
   font-weight: 300
+
+code
+  font-family: $code
+  vertical-align: bottom
+  +transition($hover)
+
+  &:hover,
+  &:active,
+  &:focus
+    background: rgba($color,.09)
 
   
 
@@ -129,11 +141,9 @@ header
       right: 0
       bottom: 0
       width: 100%
-      background: -moz-linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
-      background: -webkit-linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
-      background: linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
-
-
+      background: -moz-linear-gradient($gradient)
+      background: -webkit-linear-gradient($gradient)
+      background: linear-gradient($gradient)
 
 // Main ---------------------------------------- 
 main
@@ -184,27 +194,13 @@ section
       content: ']'
       margin-left: 5px
 
-  code
-    +transition($hover)
+.symbol
 
-    &:hover,
-    &:active,
-    &:focus
-      background: rgba($color,.2)
+  code
+    font-family: $font-family
 
 .word, .number
   width: 100px
-
-  code
-    font-family: $code
-    vertical-align: bottom
-    +transition($hover)
-
-    &:hover,
-    &:active,
-    &:focus
-      color: $color
-      background: rgba($color,.09)
 
 .word
   margin-right: 2em
