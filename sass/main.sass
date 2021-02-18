@@ -1,8 +1,10 @@
 $color: black
-$hover: all .2s ease-in-out
+$font-family: 'Lato', sans-serif
 $code: monospace
-$width-md: 768px
-$width-sm: 632px
+$hover: all .2s ease-in-out
+$gradient: to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%
+$width-md: 992px
+$width-sm: 640px
 
 =transition($property)
   -webkit-transition: $property
@@ -18,11 +20,13 @@ html
 
 body
   background: white
-  color: rgba($color, .5)
+  color: rgba($color, .66)
   font-size: 16px
-  font-family: 'Lato', sans-serif
+  font-family: $font-family
   line-height: 1.4
   letter-spacing: .025em
+  -webkit-text-size-adjust: none
+  text-size-adjust: none
 
 h1, h2, h3
   text-align: right
@@ -47,7 +51,7 @@ h3
   font-weight: 400
            
 a
-  color: rgba($color, .5)
+  color: rgba($color, .66)
   text-decoration: none
   +transition($hover)
 
@@ -57,6 +61,16 @@ a
 span
   color: rgba($color,.2)
   font-weight: 300
+
+code
+  font-family: $code
+  vertical-align: bottom
+  +transition($hover)
+
+  &:hover,
+  &:active,
+  &:focus
+    background: rgba($color,.09)
 
   
 
@@ -73,12 +87,13 @@ header
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: $width-sm) 
     display: block
     padding: 0
 
   img 
     padding-top: 1em
+    width: 120px
 
     @media screen and (max-width: $width-sm)
       padding-left: .9em
@@ -126,11 +141,9 @@ header
       right: 0
       bottom: 0
       width: 100%
-      background: -moz-linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
-      background: -webkit-linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
-      background: linear-gradient(to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%)
-
-
+      background: -moz-linear-gradient($gradient)
+      background: -webkit-linear-gradient($gradient)
+      background: linear-gradient($gradient)
 
 // Main ---------------------------------------- 
 main
@@ -181,27 +194,13 @@ section
       content: ']'
       margin-left: 5px
 
-  code
-    +transition($hover)
+.symbol
 
-    &:hover,
-    &:active,
-    &:focus
-      background: rgba($color,.05)
+  code
+    font-family: $font-family
 
 .word, .number
   width: 100px
-
-  code
-    font-family: $code
-    vertical-align: bottom
-    +transition($hover)
-
-    &:hover,
-    &:active,
-    &:focus
-      color: $color
-      background: rgba($color,.05)
 
 .word
   margin-right: 2em
@@ -225,14 +224,14 @@ section
 // Footer ----------------------------------------
 footer
   font-size: .75em  
-  color: rgba($color, .5)
+  color: rgba($color, .66)
   margin: 7em 1em 1em
 
   @media screen and (max-width: $width-md) 
     margin-top: 0
 
   a
-    color: rgba($color, .5)
+    color: rgba($color, .66)
   
     &:hover
       color: red
