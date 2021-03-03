@@ -17,7 +17,7 @@ h1, h2, h3 {
   text-align: right;
   margin: 0 40px 0 0;
   width: 230px;
-  color: black;
+  color: rgba(0, 0, 0, 0.85);
 }
 @media screen and (max-width: 992px) {
   h1, h2, h3 {
@@ -88,6 +88,7 @@ header {
 header img {
   padding-top: 1em;
   width: 120px;
+  opacity: 0.85;
 }
 @media screen and (max-width: 640px) {
   header img {
