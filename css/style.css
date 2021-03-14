@@ -69,6 +69,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-pack: justify;
@@ -154,12 +155,14 @@ main {
 
 section {
   padding-top: 10em;
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 section > div {
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0 0 2em;
