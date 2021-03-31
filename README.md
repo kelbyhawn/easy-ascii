@@ -1,6 +1,6 @@
 # easyASCII
 
-A clean, simple, easy-to-use list of ASCII codes.
+A clean, simple, easy-to-use list of ASCII codes to copy and paste.
 
 [easyascii.com](https://easyascii.com)
 
