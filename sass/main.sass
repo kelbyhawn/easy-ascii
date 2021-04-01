@@ -11,6 +11,17 @@ $width-sm: 640px
   -ms-transition: $property
   transition: $property
 
+@keyframes nudge
+  0%
+    transform: translateX(0px)
+  
+  60% 
+    transform: translateX(-22px)
+  
+  100% 
+    transform: translateX(0px)
+
+
 
 //------------------------------------------
 
@@ -109,6 +120,9 @@ header
 
       &::-webkit-scrollbar
         display: none
+
+      ul
+        animation: nudge .6s ease-in-out .7s 1
             
     li
       display: inline
@@ -127,6 +141,9 @@ header
 
         @media screen and (max-width: $width-sm)
           margin-right: 32px
+
+    a:hover
+      box-shadow: 0 2px 0px rgba(0,0,0,.09)
 
   @media screen and (max-width: $width-sm)
     .overlay
