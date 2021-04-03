@@ -2,6 +2,8 @@
 
 A clean, simple, easy-to-use list of ASCII codes to copy and paste.
 
+*Coming soon!* Click to copy.
+
 [easyascii.com](https://easyascii.com)
 
 ## Table of Contents
