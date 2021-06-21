@@ -49,6 +49,7 @@ A clean, simple, easy-to-use list of ASCII codes to copy and paste.
 - HTML5
 - CSS3
 - [Sass](https://sass-lang.com) - CSS with superpowers.
+- JavaScript
 - [jQuery](https://jquery.com) - jQuery is a fast, small, and feature-rich JavaScript library.
 
 ## License 
