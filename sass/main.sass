@@ -1,25 +1,6 @@
-$color: black
-$font-family: 'Lato', sans-serif
-$code: 'Courier', monospace
-$hover: all .2s ease-in-out
-$gradient: to right, rgba(white,1) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, rgba(white,1) 100%
-$width-md: 992px
-$width-sm: 640px
-
-=transition($property)
-  -webkit-transition: $property
-  -ms-transition: $property
-  transition: $property
-
-@keyframes nudge
-  0%
-    transform: translateX(0px)
-  
-  60% 
-    transform: translateX(-22px)
-  
-  100% 
-    transform: translateX(0px)
+@import 'variables'
+@import 'mixins'
+@import 'animation'
 
 
 //------------------------------------------
@@ -60,7 +41,7 @@ h3
 a
   color: rgba($color, .66)
   text-decoration: none
-  +transition($hover)
+  @include transition($hover)
 
   &:hover
     color: $color
@@ -72,7 +53,7 @@ span
 code
   font-family: $code
   vertical-align: bottom
-  +transition($hover)
+  @include transition($hover)
 
   &:hover,
   &:active,
@@ -88,9 +69,7 @@ header
   width: 100%
   position: fixed
   top: 0
-  display: -webkit-inline-box
-  display: -ms-inline-flexbox
-  display: inline-flex
+  @include flex
   -ms-flex-pack: justify
   justify-content: space-between
 
@@ -167,9 +146,7 @@ main
          
 section
   padding-top: 10em
-  display: -webkit-inline-box
-  display: -ms-inline-flexbox
-  display: inline-flex
+  @include flex
   -ms-flex-wrap: wrap
   flex-wrap: wrap
 
