@@ -73,6 +73,10 @@ code {
 code:hover, code:active, code:focus {
   background: rgba(0, 0, 0, 0.09);
 }
+code.disabled {
+  background: none;
+  cursor: default;
+}
 
 header {
   background: rgba(255, 255, 255, 0.9);
