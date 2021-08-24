@@ -60,6 +60,10 @@ code
   &:focus
     background: rgba($color,.09)
 
+  &.disabled
+    background: none
+    cursor: default
+
   
 
 // Nav ---------------------------------------- 
@@ -69,7 +73,7 @@ header
   width: 100%
   position: fixed
   top: 0
-  @include flex
+  @include inline-flex
   -ms-flex-pack: justify
   justify-content: space-between
 
@@ -146,14 +150,12 @@ main
          
 section
   padding-top: 10em
-  @include flex
+  @include inline-flex
   -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   & > div
-    display: -webkit-inline-box
-    display: -ms-inline-flexbox
-    display: inline-flex
+    @include inline-flex
     margin: 0 0 2em
 
     @media screen and (max-width: $width-md) 
