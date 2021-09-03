@@ -1,8 +1,8 @@
 # easyASCII
 
-A clean, simple, easy-to-use list of ASCII codes to copy and paste.
+A simple, easy-to-use list of ASCII codes to copy and paste.
 
-*Coming soon!* Click to copy.
+*Coming soon!* Dark Mode & Click to copy
 
 [easyascii.com](https://easyascii.com)
 
