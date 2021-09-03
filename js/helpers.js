@@ -10,7 +10,7 @@ export const disableHover = () => {
 // Add attributes to li items with their respective text content
 export const addAttributes = () => {
 	document.querySelectorAll('ul.copyable li').forEach(item => {
-		if(item.textContent != '-'){ // don't allow empty li's to be copied
+		if(item.textContent != '-'){ // don't allow disabled li's to be copied
 			item.classList.add('copyable'); // add class for easier selection
 			item.setAttribute('data-clipboard-text',`${item.textContent}`);
 		}
