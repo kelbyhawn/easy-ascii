@@ -2,7 +2,8 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-*Coming soon!* Dark Mode & Click to copy
+**Now live!** Click to copy
+*Coming soon!* Dark Mode
 
 [easyascii.com](https://easyascii.com)
 
