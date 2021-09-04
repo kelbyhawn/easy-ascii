@@ -83,6 +83,7 @@ code.disabled {
 }
 
 header {
+  z-index: 1;
   background: rgba(255, 255, 255, 0.9);
   padding: 0 1em 1em;
   width: 100%;
