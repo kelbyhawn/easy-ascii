@@ -2,7 +2,7 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**Now live! 🎉** Click to copy
+**New! 🎉** Click to copy
 
 *Coming soon!* Dark Mode
 
