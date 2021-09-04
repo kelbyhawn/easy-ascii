@@ -78,6 +78,10 @@ code.disabled {
   cursor: default;
 }
 
+.hide {
+  display: none;
+}
+
 header {
   background: rgba(255, 255, 255, 0.9);
   padding: 0 1em 1em;
@@ -199,6 +203,26 @@ section ul {
 }
 section ul li {
   margin-bottom: 1.25em;
+  position: relative;
+}
+section ul li .tooltip {
+  position: absolute;
+  top: 28px;
+  left: 0px;
+  background: black;
+  color: white;
+  font-size: 0.8em;
+  padding: 3px 6px 5px;
+  border-radius: 4px;
+}
+section ul li .tooltip:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  z-index: 1;
+  border: solid 5px transparent;
+  border-bottom-color: black;
 }
 
 .symbol {

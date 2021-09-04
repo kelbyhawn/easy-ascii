@@ -2,7 +2,8 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-*Coming soon!* Dark Mode & Click to copy
+**Now live!** Click to copy
+*Coming soon!* Dark Mode
 
 [easyascii.com](https://easyascii.com)
 
@@ -51,6 +52,8 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 - [Sass](https://sass-lang.com) - CSS with superpowers.
 - JavaScript
 - [jQuery](https://jquery.com) - jQuery is a fast, small, and feature-rich JavaScript library.
+- [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
+
 
 ## License 
 
