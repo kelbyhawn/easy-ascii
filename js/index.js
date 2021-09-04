@@ -15,6 +15,18 @@ clipboard.on('success', function (e) {
   console.info('Text:', e.text);
   console.info('Trigger:', e.trigger);
 
+  // add tooltip
+  e.trigger.insertAdjacentHTML('beforeend',`<span class="tooltip">Copied!</span>`);
+  
+  // hide tooltip after 2 seconds
+  const hideTooltip = tooltips => {
+    document.querySelectorAll('.tooltip').forEach(tooltip => {
+      tooltip.remove();
+    })
+  }
+  //debugger // use when working on tooltip styles
+  setTimeout(hideTooltip, 2000); 
+
   e.clearSelection();
 });
 
