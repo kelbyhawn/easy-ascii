@@ -58,11 +58,6 @@ a:hover {
   color: black;
 }
 
-span {
-  color: rgba(0, 0, 0, 0.2);
-  font-weight: 300;
-}
-
 code {
   font-family: "Courier", monospace;
   vertical-align: bottom;
@@ -206,6 +201,10 @@ section ul li {
   margin-bottom: 1.25em;
   position: relative;
 }
+section ul li span {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+}
 section ul li .tooltip {
   position: absolute;
   top: 28px;
@@ -244,7 +243,6 @@ section ul li .tooltip:before {
   content: "]";
   margin-left: 5px;
 }
-
 .symbol code {
   font-family: "Lato", sans-serif;
 }

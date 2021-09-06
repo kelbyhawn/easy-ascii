@@ -46,10 +46,6 @@ a
   &:hover
     color: $color
 
-span
-  color: rgba($color,.2)
-  font-weight: 300
-
 code
   font-family: $code
   vertical-align: bottom
@@ -173,6 +169,10 @@ section
       margin-bottom: 1.25em
       position: relative
 
+      span
+        color: rgba($color,.2)
+        font-weight: 300
+
       .tooltip
         position: absolute
         top: 28px
@@ -212,8 +212,6 @@ section
     &:after
       content: ']'
       margin-left: 5px
-
-.symbol
 
   code
     font-family: $font-family
@@ -256,5 +254,3 @@ footer
       color: red
   
   
-
-

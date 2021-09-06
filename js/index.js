@@ -1,9 +1,12 @@
 import {disableHover, addAttributes} from './helpers.js';
-import {getCopyright} from './copyright.js';
 
 disableHover();
 addAttributes();
-getCopyright();
+
+
+// Add copyright year
+document.querySelector('#year').textContent = new Date().getFullYear();
+
 
 // Click to copy code from clipboard.js 
 const items = document.querySelectorAll('li.copyable');
