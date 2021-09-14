@@ -22,7 +22,7 @@ clipboard.on('success', function (e) {
   e.trigger.insertAdjacentHTML('beforeend',`<span class="tooltip">Copied!</span>`);
   
   // hide tooltip after 2 seconds
-  const hideTooltip = tooltips => {
+  const hideTooltip = () => {
     document.querySelectorAll('.tooltip').forEach(tooltip => {
       tooltip.remove();
     })
