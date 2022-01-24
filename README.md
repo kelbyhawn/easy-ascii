@@ -11,7 +11,7 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 ## Table of Contents
 
  - [Categories](#categories)
- - [Built with](#built-with)
+ - [Dependencies](#dependencies)
  - [License](#license)
 
 ## Categories
