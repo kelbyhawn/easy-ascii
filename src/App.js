@@ -10,8 +10,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route path="popular" element={<Popular />} />
       </Route>  
-    </Routes>
-    
+    </Routes>  
   );
 }
 
