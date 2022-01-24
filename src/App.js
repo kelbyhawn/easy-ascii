@@ -1,24 +1,17 @@
-import logo from './assets/logo-easyascii.svg';
-import './styles/App.sass';
+import { Routes, Route } from "react-router-dom";
+import "./styles/App.sass";
+
+import Layout from "./Layout";
+import Popular from "./components/Popular";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="popular" element={<Popular />} />
+      </Route>  
+    </Routes>
+    
   );
 }
 
