@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./styles/App.sass";
 
 import Layout from "./Layout";
-import Popular from "./components/Popular";
+import Popular from "./routes/Popular";
 
 function App() {
   return (

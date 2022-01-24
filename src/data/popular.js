@@ -1,3 +1,4 @@
+// Popular
 const popular = [
   {
     name: "non-breaking space",
@@ -28,9 +29,41 @@ const popular = [
     symbol: "&",
     word: "&amp;",
     number: "&#38;",
-  }
+  },
+  {
+    name: "ellipsis",
+    symbol: "…",
+    word: "&hellip;",
+    number: "&#8230;",
+  },
+  {
+    name: "bullet",
+    symbol: "•",
+    word: "&bull;",
+    number: "&#8226;",
+  },
+  {
+    name: "heart",
+    symbol: "♥",
+    word: "&hearts;",
+    number: "&#9829;",
+  },
+  {
+    name: "star (solid)",
+    symbol: "★",
+    word: "-",
+    number: "&#9733;",
+  },
+  {
+    name: "star (outline)",
+    symbol: "☆",
+    word: "-",
+    number: "&#9734;",
+  },
 ];
 
+
+// Copyright Symbols
 const copyright = [
   {
     name: "copyright",
@@ -52,12 +85,44 @@ const copyright = [
   },
 ];
 
+
+// Currency
 const currency = [
   {
     name: "currency",
     symbol: "¤",
     word: "&curren;",
     number: "&#164;",
+  },
+  {
+    name: "dollar",
+    symbol: "$",
+    word: "&dollar;",
+    number: "&#36;",
+  },
+  {
+    name: "cent",
+    symbol: "¢",
+    word: "&cent;",
+    number: "&#162;",
+  },
+  {
+    name: "pound",
+    symbol: "£",
+    word: "&pound;",
+    number: "&#163;",
+  },
+  {
+    name: "euro",
+    symbol: "€",
+    word: "&euro;",
+    number: "&#8364;",
+  },
+  {
+    name: "yen",
+    symbol: "¥",
+    word: "&yen;",
+    number: "&#165;",
   },
 ];
 
