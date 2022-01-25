@@ -5,6 +5,11 @@ import ClipboardJS from "clipboard";
 // Section Components
 import Popular from "./sections/Popular";
 import Punctuation from "./sections/Punctuation";
+import Accent from "./sections/Accent";
+import Greek from "./sections/Greek";
+import Math from "./sections/Math";
+import Arrows from "./sections/Arrows";
+import Fun from "./sections/Fun";
 
 export default function Main() {
 
@@ -33,6 +38,11 @@ export default function Main() {
       {/* Sections */}
       <Popular />
       <Punctuation />
+      <Accent />
+      <Greek />
+      <Math />
+      <Arrows />
+      <Fun />
     </>
   )
 }
