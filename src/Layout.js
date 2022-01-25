@@ -30,37 +30,37 @@ export default function Layout() {
 
         <div className="overlay"></div>
 
-        <nav>
-          <ul>
-            <li>
-              <HashLink smooth to="#popular">Popular</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#punctuation">Punctuation</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#accent">Accented Characters</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#greek">Greek</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#math">Math</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#arrows">Arrows</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#fun">Fun</HashLink>
-            </li>
-            <li>
-              {/* Light & dark mode button */}
-              <button id="btn-theme"></button>
-            </li>
-          </ul>
+        <div className="wrapper">
+          <nav>     
+            <ul>
+              <li>
+                <HashLink smooth to="#popular">Popular</HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="#punctuation">Punctuation</HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="#accent">Accented Characters</HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="#greek">Greek</HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="#math">Math</HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="#arrows">Arrows</HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="#fun">Fun</HashLink>
+              </li>
+            </ul>
+          </nav>
 
-          
-        </nav>
+          {/* Light & dark mode button */}
+          <button id="btn-theme"></button>
+        </div>
+        
       </header>
 
       <main>

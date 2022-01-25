@@ -26,6 +26,7 @@
 
 :root
   @include light-theme
+  --gradient: to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%
   
   &.dark
     @include dark-theme
@@ -105,6 +106,7 @@ header
   width: 100%
   position: fixed
   top: 0
+  border-bottom: 1px solid var(--secondary-color)
   @include inline-flex
   -ms-flex-pack: justify
   justify-content: space-between
@@ -113,20 +115,50 @@ header
     display: block
     padding: 0
 
+  .wrapper
+    display: inherit
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
   #logo
-    padding-top: 1em
     width: 120px
     height: 30px
+    display: inline-block
     background: var(--logo) center no-repeat
 
+    @media screen and (max-width: $width-sm) 
+      margin: 1em
+
+  button
+    width: 30px
+    height: 30px
+    background: var(--btn-bg-color)
+    color: var(--btn-text-color)
+    font-family: $font-family
+    font-size: .775em
+    margin: 0 0 0 1.5em
+    padding: .5em
+    border: none
+    border-radius: 100%
+    cursor: pointer
+    line-height: 0
+
+    &:before 
+      content: var(--btn-icon) 
+
     @media screen and (max-width: $width-sm)
-      padding-left: .9em
+      position: absolute
+      top: 1em
+      right: 1em
 
   nav
     position: relative
+    margin-left: 10em
 
     @media screen and (max-width: $width-sm)
       padding-bottom: 1em
+      margin: 0
       white-space: nowrap
       overflow-x: auto
       overflow-y: hidden
@@ -159,23 +191,6 @@ header
     a:hover
       box-shadow: 0 2px 0px var(--secondary-color)
 
-    button
-      width: 30px
-      height: 30px
-      background: var(--btn-bg-color)
-      color: var(--btn-text-color)
-      font-family: $font-family
-      font-size: .775em
-      margin: 0
-      padding: .5em
-      border: none
-      border-radius: 100%
-      cursor: pointer
-      line-height: 0
-
-      &:before 
-        content: var(--btn-icon) 
-
   @media screen and (max-width: $width-sm)
     .overlay
       pointer-events: none /* ignore clicks */
@@ -183,13 +198,13 @@ header
       position: absolute
       z-index: 100
       height: 1em
-      top: 4em
+      top: 4.5em
       right: 0
       bottom: 0
       width: 100%
-      background: -moz-linear-gradient($gradient)
-      background: -webkit-linear-gradient($gradient)
-      background: linear-gradient($gradient)
+      background: -moz-linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
+      background: -webkit-linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
+      background: linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
 
 // Main ---------------------------------------- 
 main
