@@ -59,10 +59,6 @@ code
   &:focus
     background: rgba($color,.09)
 
-  &.disabled
-    background: none
-    cursor: default
-
 .hide 
   display: none
 
@@ -183,17 +179,23 @@ section
         background: $color
         color: white
         font-size: .8em
-        padding: 3px 6px 5px
+        font-weight: 400
+        padding: 5px 6px 5px 8px
         border-radius: 4px
+        z-index: 1
 
         &:before
           content: ""
           position: absolute
           top: -10px
-          left: 24px
+          left: 26px
           z-index: 1
           border: solid 5px transparent
           border-bottom-color: $color
+
+      &.disabled code
+        background: none
+        cursor: default
 
 .symbol
   color: $color
