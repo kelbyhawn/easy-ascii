@@ -1,44 +1,5 @@
-import { useEffect } from "react";
-import ClipboardJS from "clipboard";
-
 export default function List(props) {
   const { category } = props;
-
-  // Click to copy 
-  useEffect(() => {
-    const items = document.querySelectorAll("li.copyable");
-    const clipboard = new ClipboardJS(items);
-
-    clipboard.on("success", function (e) {
-      console.log(e);
-      console.info("Action:", e.action);
-      console.info("Text:", e.text);
-      console.info("Trigger:", e.trigger);
-  
-      // add tooltip
-      e.trigger.insertAdjacentHTML("beforeend", `<span class="tooltip">Copied!</span>`);
-      
-      // hide tooltip after 2 seconds
-      const hideTooltip = () => {
-        document.querySelectorAll(".tooltip").forEach(tooltip => {
-          tooltip.remove();
-        })
-      }
-
-      // use when working on tooltip styles
-      //debugger 
-
-      setTimeout(hideTooltip, 2000);
-  
-      e.clearSelection();
-    });
-  
-    clipboard.on("error", function (e) {
-      console.log(e);
-      console.error("Action:", e.action);
-      console.error("Trigger:", e.trigger);
-    });
-  },[]);
 
   return (
     <>

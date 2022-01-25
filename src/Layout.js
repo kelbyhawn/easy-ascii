@@ -1,4 +1,10 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+// Dependencies
+import { HashLink } from "react-router-hash-link";
+
+// Section Components
+import Main from "./Main";
+
+// Assets
 import logo from './assets/logo-easyascii.svg';
 
 export default function Layout() {
@@ -7,45 +13,45 @@ export default function Layout() {
   return (
     <>
       <header>
-        <Link to="popular">
+        <HashLink smooth to="#top">
           <img src={logo} alt="Easy ASCII" />
-        </Link>
+        </HashLink>
 
         <div className="overlay"></div>
 
         <nav>
           <ul>
             <li>
-              <NavLink to="popular">Popular</NavLink>
+              <HashLink smooth to="#popular">Popular</HashLink>
             </li>
             <li>
-              <NavLink to="punctuation">Punctuation</NavLink>
+              <HashLink smooth to="#punctuation">Punctuation</HashLink>
             </li>
             <li>
-              <NavLink to="accent">Accented Characters</NavLink>
+              <HashLink smooth to="#accent">Accented Characters</HashLink>
             </li>
             <li>
-              <NavLink to="greek">Greek</NavLink>
+              <HashLink smooth to="#greek">Greek</HashLink>
             </li>
             <li>
-              <NavLink to="math">Math</NavLink>
+              <HashLink smooth to="#math">Math</HashLink>
             </li>
             <li>
-              <NavLink to="arrows">Arrows</NavLink>
+              <HashLink smooth to="#arrows">Arrows</HashLink>
             </li>
             <li>
-              <NavLink to="fun">Fun</NavLink>
+              <HashLink smooth to="#fun">Fun</HashLink>
             </li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <Outlet />
+        <Main />
       </main>
 
       <footer>
-        <p>&copy;{year} easyASCII &bull; Made by <a href="https://kelbyhawn.com" target="_blank" rel="noreferrer">Kelby Hawn</a></p>
+        <p>©{year} easyASCII • Made by <a href="https://kelbyhawn.com" target="_blank" rel="noreferrer">Kelby Hawn</a></p>
       </footer>
     </>
   );

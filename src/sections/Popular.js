@@ -4,7 +4,7 @@ import List from "../components/List";
 export default function Popular() {
   return (
     <>
-      <section>
+      <section id="popular">
         <h1>Popular ASCII</h1>
         {popular &&
           <div>
