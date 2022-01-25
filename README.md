@@ -2,9 +2,7 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**New! 🎉** Click to copy
-
-*Coming soon!* Dark Mode
+**New! 🎉** Click to copy & Dark Mode
 
 [easyascii.com](https://easyascii.com)
 
@@ -50,6 +48,8 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev)
+- [React Router](https://www.npmjs.com/package/react-router)
+- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
 - [Sass](https://sass-lang.com) - CSS with superpowers.
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
 
