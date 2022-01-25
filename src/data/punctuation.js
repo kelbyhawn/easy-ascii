@@ -1,34 +1,34 @@
 // Punctuation
 const punctuation = [
   {
-    name: "non-breaking space",
-    symbol: " ",
-    word: "&nbsp;",
-    number: "&#32;",
+    name: "dagger",
+    symbol: "†",
+    word: "&dagger;",
+    number: "&#8224;",
   },
   {
-    name: "quote",
-    symbol: '"',
-    word: "&quot;",
-    number: "&#34;",
+    name: "double dagger",
+    symbol: "‡",
+    word: "&Dagger;",
+    number: "&#8225;",
   },
   {
-    name: "exclamation point",
-    symbol: "!",
-    word: "&excl;",
-    number: "&#33;",
+    name: "paragraph",
+    symbol: "¶",
+    word: "&para;",
+    number: "&#182;",
   },
   {
-    name: "question mark",
-    symbol: "?",
-    word: "&quest;",
-    number: "&#63;",
+    name: "section",
+    symbol: "§",
+    word: "&sect;",
+    number: "&#167;",
   },
   {
-    name: "ampersand",
-    symbol: "&",
-    word: "&amp;",
-    number: "&#38;",
+    name: "numero symbol",
+    symbol: "№",
+    word: "-",
+    number: "&#8470;",
   },
 ];
 
@@ -36,10 +36,16 @@ const punctuation = [
 // Spaces
 const spaces = [
   {
-    name: "copyright",
-    symbol: "©",
-    word: "&copy;",
-    number: "&#169;",
+    name: "en space",
+    symbol: " ",
+    word: "&ensp;",
+    number: "&#8194;",
+  },
+  {
+    name: "em space",
+    symbol: " ",
+    word: "&emsp;",
+    number: "&#8195;",
   },
 ];
 
@@ -47,44 +53,92 @@ const spaces = [
 // Dashes
 const dashes = [
   {
-    name: "currency",
-    symbol: "¤",
-    word: "&curren;",
-    number: "&#164;",
+    name: "en dash",
+    symbol: "–",
+    word: "&ndash;",
+    number: "&#8211;",
   },
   {
-    name: "euro",
-    symbol: "€",
-    word: "&euro;",
-    number: "&#8364;",
-  },
-  {
-    name: "yen",
-    symbol: "¥",
-    word: "&yen;",
-    number: "&#165;",
+    name: "em dash",
+    symbol: "—",
+    word: "&mdash;",
+    number: "&#8212;",
   },
 ];
 
 // Quotes
 const quotes = [
   {
-    name: "currency",
-    symbol: "¤",
-    word: "&curren;",
-    number: "&#164;",
+    name: "left single quotation",
+    symbol: "‘",
+    word: "&lsquo;",
+    number: "&#8216;",
   },
   {
-    name: "euro",
-    symbol: "€",
-    word: "&euro;",
-    number: "&#8364;",
+    name: "right single quotation",
+    symbol: "’",
+    word: "&rsquo;",
+    number: "&#8217;",
   },
   {
-    name: "yen",
-    symbol: "¥",
-    word: "&yen;",
-    number: "&#165;",
+    name: "left double quotation",
+    symbol: "“",
+    word: "&ldquo;",
+    number: "&#8220;",
+  },
+  {
+    name: "right double quotation",
+    symbol: "”",
+    word: "&rdquo;",
+    number: "&#8221;",
+  },
+  {
+    name: "comma left single quote",
+    symbol: "❛",
+    word: "-",
+    number: "&#10075;",
+  },
+  {
+    name: "comma right single quote",
+    symbol: "❜",
+    word: "-",
+    number: "&#10076;",
+  },
+  {
+    name: "comma left double quote",
+    symbol: "❝",
+    word: "-",
+    number: "&#10077;",
+  },
+  {
+    name: "comma right double quote",
+    symbol: "❞",
+    word: "-",
+    number: "&#10078;",
+  },
+  {
+    name: "left single guillemet",
+    symbol: "‹",
+    word: "&lsaquo;",
+    number: "&#8249;",
+  },
+  {
+    name: "right single guillemet",
+    symbol: "›",
+    word: "&rsaquo;",
+    number: "&#8250;",
+  },
+  {
+    name: "left guillemet",
+    symbol: "«",
+    word: "&laquo;",
+    number: "&#171;",
+  },
+  {
+    name: "right guillemet",
+    symbol: "»",
+    word: "&raquo;",
+    number: "&#187;",
   },
 ];
 
