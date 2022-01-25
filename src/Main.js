@@ -8,21 +8,6 @@ import Punctuation from "./sections/Punctuation";
 
 export default function Main() {
 
-  // Toggle dark or light theme
-  useEffect(() => {
-    const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const button = document.querySelector("#btn-theme");
-
-    // Change theme on click
-    button.addEventListener("click", () => { 
-      if (prefersDarkTheme.matches) {
-        document.documentElement.classList.toggle("light");
-      } else {
-        document.documentElement.classList.toggle("dark");
-      }
-    })
-  }, []);
-
   // Click to copy 
   useEffect(() => {
     const items = document.querySelectorAll("li.copyable");
@@ -44,10 +29,7 @@ export default function Main() {
   }, []);
   
   return (
-    <>
-      {/* Light & dark mode button */}
-      <button id="btn-theme"></button>
-      
+    <>      
       {/* Sections */}
       <Popular />
       <Punctuation />

@@ -1,21 +1,32 @@
 // Dependencies
+import { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 // Section Components
 import Main from "./Main";
 
-// Assets
-import logo from './assets/logo-easyascii.svg';
-
 export default function Layout() {
   const year = new Date().getFullYear();
+
+  // Toggle light & dark theme
+  useEffect(() => {
+    const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const button = document.querySelector("#btn-theme");
+
+    // Change theme on click
+    button.addEventListener("click", () => { 
+      if (prefersDarkTheme.matches) {
+        document.documentElement.classList.toggle("light");
+      } else {
+        document.documentElement.classList.toggle("dark");
+      }
+    })
+  }, []);
 
   return (
     <>
       <header>
-        <HashLink smooth to="#top">
-          <img src={logo} alt="Easy ASCII" />
-        </HashLink>
+        <HashLink smooth to="#top" id="logo" alt="easyASCII logo" />
 
         <div className="overlay"></div>
 
@@ -42,7 +53,13 @@ export default function Layout() {
             <li>
               <HashLink smooth to="#fun">Fun</HashLink>
             </li>
+            <li>
+              {/* Light & dark mode button */}
+              <button id="btn-theme"></button>
+            </li>
           </ul>
+
+          
         </nav>
       </header>
 
