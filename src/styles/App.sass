@@ -4,13 +4,44 @@
 @import 'mixins'
 @import 'animation'
 
+// light theme colors
+@mixin light-theme
+  --text-color: #3e3e3e
+  --bg-color: #fafafa
+  --btn-text-color: #fafafa
+  --btn-bg-color: #303030
+  --btn-content: "Dark"
+  --btn-icon: url("/assets/icon-moon.svg") 
+
+// dark theme colors
+@mixin dark-theme
+  --text-color: #dadada
+  --bg-color: #252525
+  --btn-text-color: #303030
+  --btn-bg-color: #e7e7e7
+  --btn-content: "Light"
+  --btn-icon: url("/assets/icon-sun.svg")
+
+:root
+  @include light-theme
+  
+  &.dark
+    @include dark-theme
+    
+@media (prefers-color-scheme: dark)
+  :root
+    @include dark-theme
+
+  :root.light
+    @include light-theme
+
 
 //------------------------------------------
 
 
 body
-  background: white
-  color: rgba($color, .66)
+  background: var(--bg-color)
+  color: var(--text-color)
   font-size: 16px
   font-family: $font-family
   line-height: 1.4
@@ -22,7 +53,7 @@ h1, h2, h3
   text-align: right
   margin: 0 40px 0 0
   width: 230px
-  color: rgba($color, .85)
+  color: var(--text-color)
 
   @media screen and (max-width: $width-md) 
     width: 100%
@@ -41,12 +72,12 @@ h3
   font-weight: 400
            
 a
-  color: rgba($color, .66)
+  color: var(--text-color)
   text-decoration: none
   @include transition($hover)
 
   &:hover
-    color: $color
+    color: var(--text-color)
 
 code
   font-family: $code
@@ -57,17 +88,46 @@ code
   &:hover,
   &:active,
   &:focus
-    background: rgba($color,.09)
+    background: var(--text-color)
 
 .hide 
   display: none
+
+
+button
+  width: 68px
+  position: absolute
+  top: 1em
+  right: 1em
+  background: var(--btn-bg-color)
+  color: var(--btn-text-color)
+  font-family: $font-family
+  font-size: .775em
+  margin: 0
+  padding: .5em
+  border: none
+  border-radius: 4px
+  cursor: pointer
+  z-index: 1
+
+  &:before 
+    content: var(--btn-icon) 
+    margin-right: 6px
+    line-height: 1
+    display: inline-block
+    vertical-align: middle
+
+  &:after
+    content: var(--btn-content)
+    display: inline-block
+    margin-top: 1px
 
   
 
 // Nav ---------------------------------------- 
 header
   z-index: 1
-  background: rgba(white, .9)
+  background: var(--bg-color)
   padding: 0 1em 1em
   width: 100%
   position: fixed
@@ -169,14 +229,14 @@ section
       position: relative
 
       span
-        color: rgba($color,.2)
+        color: var(--text-color)
         font-weight: 300
 
       .tooltip
         position: absolute
         top: 28px
         left: 0px
-        background: $color
+        background: var(--bg-color)
         color: white
         font-size: .8em
         font-weight: 400
@@ -191,14 +251,14 @@ section
           left: 26px
           z-index: 1
           border: solid 5px transparent
-          border-bottom-color: $color
+          border-bottom-color: var(--text-color)
 
       &.disabled code
         background: none
         cursor: default
 
 .symbol
-  color: $color
+  color: var(--text-color)
   text-align: center
   width: 60px
   margin-right: 2.25em
@@ -207,7 +267,7 @@ section
 
     &:before,
     &:after
-      color: rgba($color, .2)
+      color: var(--text-color)
       font-weight: 300
 
     &:before
@@ -247,14 +307,14 @@ section
 // Footer ----------------------------------------
 footer
   font-size: .75em  
-  color: rgba($color, .66)
+  color: var(--text-color)
   margin: 7em 1em 1em
 
   @media screen and (max-width: $width-md) 
     margin-top: 0
 
   a
-    color: rgba($color, .66)
+    color: var(--text-color)
   
     &:hover
       color: red
