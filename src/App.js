@@ -1,5 +1,5 @@
 // Dependencies
-import { Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // Layout Component
 import Layout from "./Layout";
@@ -9,10 +9,12 @@ import "./styles/App.sass";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />} /> 
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>  
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />} /> 
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes> 
+    </Router>  
   );
 }
 
