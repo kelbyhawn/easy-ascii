@@ -550,23 +550,4 @@ const funMisc = [
   },
 ];
 
-export { fun, weather, celestial, cards, chess, music, checks, office, funMisc };
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+export { fun, weather, celestial, cards, chess, music, checks, office, funMisc };  
