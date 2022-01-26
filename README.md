@@ -50,8 +50,8 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 - [Create React App](https://create-react-app.dev)
 - [React Router](https://www.npmjs.com/package/react-router)
 - [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
-- [Sass](https://sass-lang.com) - CSS with superpowers.
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
+- [Sass](https://sass-lang.com) - CSS with superpowers.
 
 
 ## License 
