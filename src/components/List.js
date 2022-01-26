@@ -4,7 +4,7 @@ export default function List(props) {
   return (
     <>
       <ul className="symbol">
-        {category.map(item => (<>
+        {category.map(item => (
           <li
             key={item.symbol}
             className="copyable"
@@ -12,11 +12,11 @@ export default function List(props) {
           >
             <code>{item.symbol}</code>
           </li>
-        </>))}
+        ))}
       </ul>
 
       <ul className="word">
-        {category.map(item => (<>
+        {category.map(item => (
           <li
             key={item.id}
             className={item.word !== "-" ? "copyable" : "disabled"}
@@ -24,11 +24,11 @@ export default function List(props) {
           >
             <code>{item.word}</code>
           </li>
-        </>))}
+        ))}
       </ul>
 
       <ul className="number">
-        {category.map(item => (<>
+        {category.map(item => (
           <li
             key={item.number}
             className="copyable"
@@ -36,13 +36,13 @@ export default function List(props) {
           >
             <code>{item.number}</code>
           </li>
-        </>))}
+        ))}
       </ul>
 
       <ul className="name">
-        {category.map(item => (<>
+        {category.map(item => (
           <li key={item.name}>{item.name}</li>
-        </>))}
+        ))}
       </ul>
     </>
   )
