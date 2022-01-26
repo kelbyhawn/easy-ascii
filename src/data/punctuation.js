@@ -1,5 +1,3 @@
-import { nanoid } from "nanoid";
-
 // Punctuation
 const punctuation = [
   {
@@ -143,15 +141,6 @@ const quotes = [
     number: "&#187;",
   },
 ];
-
-function getIds(category) {
-  category.forEach((item, i) => item.id = i + nanoid(6));
-}
-
-getIds(punctuation);
-getIds(spaces);
-getIds(dashes);
-getIds(quotes);
 
 export { punctuation, spaces, dashes, quotes };
   
