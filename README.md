@@ -2,16 +2,14 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**New! 🎉** Click to copy
-
-*Coming soon!* Dark Mode
+**New! 🎉** Complete rewrite, click to copy, and auto dark/light mode
 
 [easyascii.com](https://easyascii.com)
 
 ## Table of Contents
 
  - [Categories](#categories)
- - [Built with](#built-with)
+ - [Dependencies](#dependencies)
  - [License](#license)
 
 ## Categories
@@ -46,14 +44,15 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
   - Office
   - Misc
 
-## Built with
+## Dependencies
 
-- HTML5
-- CSS3
-- [Sass](https://sass-lang.com) - CSS with superpowers.
-- JavaScript
-- [jQuery](https://jquery.com) - jQuery is a fast, small, and feature-rich JavaScript library.
+- [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev)
+- [React Router](https://www.npmjs.com/package/react-router)
+- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
+- [smoothscroll-polyfill](https://www.npmjs.com/package/smoothscroll-polyfill) - Scroll Behavior polyfill.
+- [Sass](https://sass-lang.com) - CSS with superpowers.
 
 
 ## License 

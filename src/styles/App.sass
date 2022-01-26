@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
+  
+@import 'variables'
+@import 'mixins'
+@import 'animation'
+
+// light theme colors
+@mixin light-theme
+  --text-color: #3e3e3e
+  --bg-color: #fafafa
+  --secondary-color: #dbdbdb
+  --btn-bg-color: #3e3e3e
+  --btn-icon: url("/assets/icon-moon.svg") 
+  --logo: url("/assets/logo-easyascii.svg")
+
+// dark theme colors
+@mixin dark-theme
+  --text-color: #dadada
+  --bg-color: #303030
+  --secondary-color: #757575
+  --btn-bg-color: #e7e7e7
+  --btn-icon: url("/assets/icon-sun.svg")
+  --logo: url("/assets/logo-easyascii-light.svg")
+
+:root
+  @include light-theme
+  
+  &.dark
+    @include dark-theme
+    
+@media (prefers-color-scheme: dark)
+  :root
+    @include dark-theme
+
+  :root.light
+    @include light-theme
+
+
+//------------------------------------------
+
+
+body
+  background: var(--bg-color)
+  color: var(--text-color)
+  font-size: 16px
+  font-family: $font-family
+  line-height: 1.4
+  letter-spacing: .025em
+  -webkit-text-size-adjust: none
+  text-size-adjust: none
+
+h1, h2, h3
+  text-align: right
+  margin: 0 40px 0 0
+  width: 230px
+  color: var(--text-color)
+
+  @media screen and (max-width: $width-md) 
+    width: 100%
+    display: block
+    margin-bottom: 1.5em
+    text-align: left
+
+h1, h2
+  font-size: 1.5em
+  font-weight: 700
+  line-height: 1
+  margin-top: -3px
+
+h3
+  font-size: 1em
+  font-weight: 400
+           
+a
+  color: var(--text-color)
+  text-decoration: none
+  @include transition($hover)
+
+  &:hover
+    color: var(--text-color)
+
+code
+  font-family: $code
+  font-weight: bold
+  vertical-align: bottom
+  @include transition($hover)
+
+  &:hover,
+  &:active,
+  &:focus
+    background: var(--secondary-color)
+
+.hide 
+  display: none
+
+  
+
+// Nav ---------------------------------------- 
+header
+  z-index: 1
+  background: var(--bg-color)
+  padding: 1em
+  width: 100%
+  position: fixed
+  top: 0
+  border-bottom: 1px solid var(--secondary-color)
+  @include inline-flex
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+  @media screen and (max-width: $width-sm) 
+    display: block
+    padding: 0
+
+  .wrapper
+    display: inherit
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
+  #logo
+    width: 120px
+    height: 30px
+    display: inline-block
+    background: var(--logo) center no-repeat
+
+    @media screen and (max-width: $width-sm) 
+      margin: 1em
+
+  button
+    width: 30px
+    height: 30px
+    background: var(--btn-bg-color)
+    font-family: $font-family
+    font-size: .775em
+    margin: 0 0 0 1.5em
+    padding: .5em
+    border: none
+    border-radius: 100%
+    cursor: pointer
+    line-height: 0
+
+    &:before 
+      content: var(--btn-icon) 
+
+    @media screen and (max-width: $width-sm)
+      position: absolute
+      top: 1em
+      right: 1em
+
+  nav
+    position: relative
+    margin-left: 10em
+
+    @media screen and (max-width: $width-md)
+      margin-left: 0
+
+    @media screen and (max-width: $width-sm)
+      padding-bottom: 1em
+      margin: 0
+      white-space: nowrap
+      overflow-x: auto
+      overflow-y: hidden
+      -webkit-overflow-scrolling: touch
+
+      &::-webkit-scrollbar
+        display: none
+
+      ul
+        animation: nudge .6s ease-in-out .7s 1
+            
+    li
+      display: inline
+      margin-right: 1.5em
+      font-size: .9em
+
+      @media screen and (max-width: $width-md)
+        font-size: .85em
+
+      @media screen and (max-width: $width-sm)
+        &:first-child
+          margin-left: 16px
+
+      &:last-child
+        margin-right: 0
+
+        @media screen and (max-width: $width-sm)
+          margin-right: 32px
+
+    a:hover
+      box-shadow: 0 2px 0px var(--secondary-color)
+
+  @media screen and (max-width: $width-sm)
+    .overlay
+      pointer-events: none /* ignore clicks */
+      content: ""
+      position: absolute
+      z-index: 100
+      height: 1em
+      top: 4.5em
+      right: 0
+      bottom: 0
+      width: 100%
+      background: -moz-linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
+      background: -webkit-linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
+      background: linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
+
+// Main ---------------------------------------- 
+main
+  max-width: 960px
+  padding: 0 1em
+  margin: 0 auto 1em      
+         
+section
+  padding-top: 10em
+  @include inline-flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+  & > div
+    @include inline-flex
+    margin: 0 0 2em
+
+    @media screen and (max-width: $width-md) 
+      margin: 0 auto 2em
+
+  ul
+    list-style: none
+    width: 180px
+
+    li
+      margin-bottom: 1.25em
+      position: relative
+
+      span
+        color: var(--text-color)
+        font-weight: 300
+
+      .tooltip
+        position: absolute
+        top: 28px
+        left: 0px
+        background: var(--text-color)
+        color: var(--bg-color)
+        font-size: .8em
+        font-weight: 400
+        padding: 5px 6px 5px 8px
+        border-radius: 4px
+        z-index: 1
+
+        &:before
+          content: ""
+          position: absolute
+          top: -10px
+          left: 26px
+          z-index: 1
+          border: solid 5px transparent
+          border-bottom-color: var(--text-color)
+
+      &.disabled code
+        background: none
+        cursor: default
+        color: var(--secondary-color)
+
+.symbol
+  color: var(--text-color)
+  text-align: center
+  width: 60px
+  margin-right: 2.25em
+
+  li
+
+    &:before,
+    &:after
+      color: var(--secondary-color)
+      margin: 0 2px
+
+    &:before
+      content: '['
+
+    &:after
+      content: ']'
+
+  code
+    font-family: $font-family
+    font-weight: 400
+    padding: 0 3px
+
+.word, .number
+  width: 100px
+
+.word
+  margin-right: 2em
+
+.number
+  margin-right: 1.75em
+
+  @media screen and (max-width: $width-sm) 
+    margin-right: 0
+
+.name
+  width: 230px
+  font-weight: 300
+  margin-top: -2px
+  cursor: default
+
+  @media screen and (max-width: $width-sm) 
+    display: none
+   
+
+
+// Footer ----------------------------------------
+footer
+  font-size: .75em  
+  color: var(--text-color)
+  margin: 7em 1em 1em
+
+  @media screen and (max-width: $width-md) 
+    margin-top: 0
+
+  a
+    color: var(--text-color)
+  
+    &:hover
+      color: red
+  
+  
