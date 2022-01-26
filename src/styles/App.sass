@@ -8,6 +8,7 @@
 @mixin light-theme
   --text-color: #3e3e3e
   --bg-color: #fafafa
+  --bg-color-rbg: 250, 250, 250
   --secondary-color: #dbdbdb
   --btn-bg-color: #3e3e3e
   --btn-icon: url("/assets/icon-moon.svg") 
@@ -17,6 +18,7 @@
 @mixin dark-theme
   --text-color: #dadada
   --bg-color: #303030
+  --bg-color-rgb: 48, 48, 48
   --secondary-color: #757575
   --btn-bg-color: #e7e7e7
   --btn-icon: url("/assets/icon-sun.svg")
@@ -201,9 +203,9 @@ header
       right: 0
       bottom: 0
       width: 100%
-      background: -moz-linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
-      background: -webkit-linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
-      background: linear-gradient(to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%)
+      background: -moz-linear-gradient(to right, var(--bg-color) 0%, rgba(var(--bg-color-rbg),0) 4%, rgba(var(--bg-color-rbg),0) 50%, rgba(var(--bg-color-rbg),0) 93%, var(--bg-color) 100%)
+      background: -webkit-linear-gradient(to right, var(--bg-color) 0%, rgba(var(--bg-color-rbg),0) 4%, rgba(var(--bg-color-rbg),0) 50%, rgba(var(--bg-color-rbg),0) 93%, var(--bg-color) 100%)
+      background: linear-gradient(to right, var(--bg-color) 0%, rgba(var(--bg-color-rbg),0) 4%, rgba(var(--bg-color-rbg),0) 50%, rgba(var(--bg-color-rbg),0) 93%, var(--bg-color) 100%)
 
 // Main ---------------------------------------- 
 main
