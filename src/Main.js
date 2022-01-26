@@ -1,6 +1,7 @@
 // Dependencies
 import { useEffect } from "react";
 import ClipboardJS from "clipboard";
+import smoothscroll from 'smoothscroll-polyfill';
 
 // Section Components
 import Popular from "./sections/Popular";
@@ -12,6 +13,8 @@ import Arrows from "./sections/Arrows";
 import Fun from "./sections/Fun";
 
 export default function Main() {
+  // Allows for smooth scrolling in Safari
+  smoothscroll.polyfill();
 
   // Click to copy 
   useEffect(() => {
