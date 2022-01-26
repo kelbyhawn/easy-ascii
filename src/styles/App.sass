@@ -24,7 +24,6 @@
 
 :root
   @include light-theme
-  --gradient: to right, var(--bg-color) 0%, rgba(white,0) 4%, rgba(white,0) 50%, rgba(white,0) 93%, var(--bg-color) 100%
   
   &.dark
     @include dark-theme
@@ -152,6 +151,9 @@ header
   nav
     position: relative
     margin-left: 10em
+
+    @media screen and (max-width: $width-md)
+      margin-left: 0
 
     @media screen and (max-width: $width-sm)
       padding-bottom: 1em
