@@ -38,11 +38,13 @@ export default function Main() {
       {/* Sections */}
       <Popular />
       <Punctuation />
+      {/* 
       <Accent />
       <Greek />
       <Math />
       <Arrows />
       <Fun />
+      */}
     </>
   )
 }

@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 // Popular
 const popular = [
   {
@@ -125,6 +127,14 @@ const currency = [
     number: "&#165;",
   },
 ];
+
+function getIds(category) {
+  category.forEach((item, i) => item.id = i + nanoid(6));
+}
+
+getIds(popular);
+getIds(copyright);
+getIds(currency)
 
 export { popular, copyright, currency };
   

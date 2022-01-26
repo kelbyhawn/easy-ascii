@@ -16,9 +16,9 @@ export default function List(props) {
       </ul>
 
       <ul className="word">
-        {category.map((item) => (<>
+        {category.map(item => (<>
           <li
-            key={item.word}
+            key={item.id}
             className={item.word !== "-" ? "copyable" : "disabled"}
             data-clipboard-text={item.word}
           >
