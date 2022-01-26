@@ -2,7 +2,7 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**New! 🎉** Click to copy & Auto Dark/Light Mode
+**New! 🎉** Complete rewrite, click to copy, and auto dark/light mode
 
 [easyascii.com](https://easyascii.com)
 
@@ -51,6 +51,7 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 - [React Router](https://www.npmjs.com/package/react-router)
 - [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
+- [smoothscroll-polyfill](https://www.npmjs.com/package/smoothscroll-polyfill) - Scroll Behavior polyfill.
 - [Sass](https://sass-lang.com) - CSS with superpowers.
 
 
