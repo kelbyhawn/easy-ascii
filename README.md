@@ -2,7 +2,7 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**New! 🎉** Complete rewrite, click to copy, and auto dark/light mode
+**New! 🎉** Complete rewrite, auto light/dark mode, and click to copy
 
 [easyascii.com](https://easyascii.com)
 
