@@ -7,23 +7,17 @@ export default function Greek() {
       <section id="greek">
         <h1>Greek Letters & Symbols</h1>
         {greekUppercase &&
-          <div>
-            <List category={greekUppercase} /> 
-          </div>
+          <List category={greekUppercase} />
         }
 
         <h3>Lowercase</h3>
         {greekLowercase &&
-          <div>
-            <List category={greekLowercase} />
-          </div>
+          <List category={greekLowercase} />
         }
 
         <h3>Symbols</h3>
         {greekSymbols &&
-          <div>
-            <List category={greekSymbols} />
-          </div>
+          <List category={greekSymbols} />
         }
       </section>
     </>

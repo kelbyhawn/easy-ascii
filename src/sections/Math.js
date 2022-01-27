@@ -7,30 +7,22 @@ export default function Math() {
       <section id="math">
         <h1>Math</h1>
         {math &&
-          <div>
-            <List category={math} /> 
-          </div>
+          <List category={math} />
         }
 
         <h3>Fractions</h3>
         {fractions &&
-          <div>
-            <List category={fractions} />
-          </div>
+          <List category={fractions} />
         }
 
         <h3>Equality / Inequality</h3>
         {equality &&
-          <div>
-            <List category={equality} />
-          </div>
+          <List category={equality} />
         }
 
         <h3>Misc</h3>
         {mathMisc &&
-          <div>
-            <List category={mathMisc} />
-          </div>
+          <List category={mathMisc} />
         }
       </section>
     </>

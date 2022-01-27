@@ -7,23 +7,17 @@ export default function Popular() {
       <section id="popular">
         <h1>Popular ASCII</h1>
         {popular &&
-          <div>
-            <List category={popular} /> 
-          </div>
+          <List category={popular} />
         }
 
         <h3>Copyright Symbols</h3>
         {copyright &&
-          <div>
-            <List category={copyright} />
-          </div>
+          <List category={copyright} />
         }
 
         <h3>Currency</h3>
         {currency &&
-          <div>
-            <List category={currency} />
-          </div>
+          <List category={currency} />
         }
       </section>
     </>
