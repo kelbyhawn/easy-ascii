@@ -7,65 +7,47 @@ export default function Fun() {
       <section id="fun">
         <h1>Fun</h1>
         {fun &&
-          <div>
-            <List category={fun} /> 
-          </div>
+          <List category={fun} /> 
         }
 
         <h3>Weather</h3>
         {weather &&
-          <div>
-            <List category={weather} />
-          </div>
+          <List category={weather} />
         }
 
         <h3>Celestial</h3>
         {celestial &&
-          <div>
-            <List category={celestial} />
-          </div>
+          <List category={celestial} /> 
         }
 
         <h3>Card Suits</h3>
         {cards &&
-          <div>
-            <List category={cards} />
-          </div>
+          <List category={cards} />
         }
 
         <h3>Chess Pieces</h3>
         {chess &&
-          <div>
-            <List category={chess} />
-          </div>
+          <List category={chess} /> 
         }
 
         <h3>Music Notes</h3>
         {music &&
-          <div>
-            <List category={music} />
-          </div>
+          <List category={music} />
         }
 
         <h3>Check Marks</h3>
         {checks &&
-          <div>
-            <List category={checks} />
-          </div>
+          <List category={checks} />
         }
 
         <h3>Office</h3>
         {office &&
-          <div>
-            <List category={office} />
-          </div>
+          <List category={office} />
         }
 
         <h3>Misc</h3>
         {funMisc &&
-          <div>
-            <List category={funMisc} />
-          </div>
+          <List category={funMisc} />
         }
       </section>
     </>

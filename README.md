@@ -4,7 +4,7 @@
 
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**New! 🎉** Complete rewrite • Click to copy • Auto dark/light mode
+**New! 🎉** Complete rewrite • Auto light/dark mode • Click to copy
 
 [easyascii.com](https://easyascii.com)
 

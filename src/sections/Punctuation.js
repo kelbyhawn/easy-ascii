@@ -7,30 +7,22 @@ export default function Punctuation() {
       <section id="punctuation">
         <h1>Punctuation</h1>
         {punctuation &&
-          <div>
-            <List category={punctuation} /> 
-          </div>
+          <List category={punctuation} /> 
         }
 
         <h3>Spaces</h3>
         {spaces &&
-          <div>
-            <List category={spaces} />
-          </div>
+          <List category={spaces} />
         }
 
         <h3>Dashes</h3>
         {dashes &&
-          <div>
-            <List category={dashes} />
-          </div>
+          <List category={dashes} />
         }
 
         <h3>Quotes</h3>
         {quotes &&
-          <div>
-            <List category={quotes} />
-          </div>
+          <List category={quotes} />
         }
       </section>
     </>
