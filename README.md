@@ -1,8 +1,10 @@
 # easyASCII
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/171f2319-44ac-43a1-aad4-3288645ecec5/deploy-status)](https://app.netlify.com/sites/easyascii/deploys)
+
 A simple, easy-to-use list of ASCII codes to copy and paste.
 
-**New! 🎉** Complete rewrite, auto light/dark mode, and click to copy
+**New! 🎉** Complete rewrite • Auto light/dark mode • Click to copy
 
 [easyascii.com](https://easyascii.com)
 
