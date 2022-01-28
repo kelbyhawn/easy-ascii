@@ -4,7 +4,7 @@ const fun = [
     name: "smiley face",
     symbol: "☺",
     word: "-",
-    number: "&#8224;",
+    number: "&#9786;",
   },
   {
     name: "filled smiley face",

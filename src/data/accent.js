@@ -55,8 +55,20 @@ const accentUppercase = [
     number: "&#200;",
   },
   {
-    name: "E, umlaut",
+    name: "E, acute",
     symbol: "É",
+    word: "&Eacute;",
+    number: "&#201;",
+  },
+  {
+    name: "E, circumflex",
+    symbol: "Ê",
+    word: "&Ecirc;",
+    number: "&#202;",
+  },
+  {
+    name: "E, umlaut",
+    symbol: "Ë",
     word: "&Euml;",
     number: "&#203;",
   },
