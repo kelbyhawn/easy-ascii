@@ -50,8 +50,8 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev)
-- [React Router](https://www.npmjs.com/package/react-router)
-- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
+- [React Router](https://www.npmjs.com/package/react-router) - Declarative routing for React
+- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link) - Hash link scroll functionality for React Router 
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
 - [smoothscroll-polyfill](https://www.npmjs.com/package/smoothscroll-polyfill) - Scroll Behavior polyfill.
 - [Sass](https://sass-lang.com) - CSS with superpowers.
