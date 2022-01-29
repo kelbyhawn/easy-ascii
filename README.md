@@ -59,4 +59,4 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 
 ## License 
 
-MIT - [View license](https://github.com/kelbyhawn/easy-ascii/blob/master/LICENSE)
+MIT - [View license](https://github.com/kelbyhawn/easy-ascii/blob/main/LICENSE)
