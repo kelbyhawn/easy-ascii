@@ -31,6 +31,12 @@ const popular = [
     number: "&#38;",
   },
   {
+    name: "at sign",
+    symbol: "@",
+    word: "&commat;",
+    number: "&#64;",
+  },
+  {
     name: "ellipsis",
     symbol: "…",
     word: "&hellip;",
