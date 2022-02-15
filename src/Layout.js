@@ -1,11 +1,12 @@
 // Dependencies
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
 // Section Components
 import Main from "./Main";
 
 export default function Layout() {
+  const [isScrolling, setIsScrolling] = useState(false);
   const year = new Date().getFullYear();
 
   // Toggle light & dark theme
@@ -22,6 +23,21 @@ export default function Layout() {
       }
     })
   }, []);
+
+  // Show Back to top button
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) setIsScrolling(true);
+      else setIsScrolling(false);
+    });
+  }, []);
+
+  function handleBackToTopClick() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 
   return (
     <>
@@ -63,8 +79,13 @@ export default function Layout() {
         
       </header>
 
-      <main>
+      <main>   
         <Main />
+
+        {isScrolling &&
+          <button className="back-to-top" onClick={handleBackToTopClick}>
+            <span>↑</span> Back to top
+          </button>}
       </main>
 
       <footer>
