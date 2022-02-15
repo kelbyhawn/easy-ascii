@@ -81,6 +81,34 @@ a
   &:hover
     color: var(--text-color)
 
+.back-to-top
+  font-family: $font-family
+  position: fixed
+  bottom: 0
+  right: 0
+  padding: 1em
+  border: 0
+  border-radius: 8px 8px 0 0
+  font-size: .85em
+  cursor: pointer
+  color: var(--text-color)
+  background: var(--bg-color)
+  opacity: .9
+
+  span
+    vertical-align: baseline
+    font-size: 1em
+    @include transition($hover)
+
+    @-moz-document url-prefix()
+      font-size: 1.5em
+      margin-right: 2px
+      vertical-align: bottom
+
+  &:hover 
+    span
+      color: red
+
 code
   font-family: $code
   font-weight: bold
@@ -314,9 +342,14 @@ section
 
 // Footer ----------------------------------------
 footer
+  width: 100%
+  padding: 0 1em
+  margin: 7em auto 1em
   font-size: .75em  
   color: var(--text-color)
-  margin: 7em 1em 1em
+  @include inline-flex
+  -ms-flex-pack: justify
+  justify-content: space-between
 
   @media screen and (max-width: $width-md) 
     margin-top: 0
