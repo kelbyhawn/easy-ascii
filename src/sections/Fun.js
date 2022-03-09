@@ -10,42 +10,42 @@ export default function Fun() {
           <List category={fun} /> 
         }
 
-        <h3>Weather</h3>
+        <h2>Weather</h2>
         {weather &&
           <List category={weather} />
         }
 
-        <h3>Celestial</h3>
+        <h2>Celestial</h2>
         {celestial &&
           <List category={celestial} /> 
         }
 
-        <h3>Card Suits</h3>
+        <h2>Card Suits</h2>
         {cards &&
           <List category={cards} />
         }
 
-        <h3>Chess Pieces</h3>
+        <h2>Chess Pieces</h2>
         {chess &&
           <List category={chess} /> 
         }
 
-        <h3>Music Notes</h3>
+        <h2>Music Notes</h2>
         {music &&
           <List category={music} />
         }
 
-        <h3>Check Marks</h3>
+        <h2>Check Marks</h2>
         {checks &&
           <List category={checks} />
         }
 
-        <h3>Office</h3>
+        <h2>Office</h2>
         {office &&
           <List category={office} />
         }
 
-        <h3>Misc</h3>
+        <h2>Misc</h2>
         {funMisc &&
           <List category={funMisc} />
         }

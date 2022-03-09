@@ -10,7 +10,7 @@ export default function Arrows() {
           <List category={arrows} /> 
         }
 
-        <h3>Hands</h3>
+        <h2>Hands</h2>
         {hands &&
           <List category={hands} />
         }

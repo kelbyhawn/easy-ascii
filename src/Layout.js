@@ -42,7 +42,7 @@ export default function Layout() {
   return (
     <>
       <header>
-        <HashLink smooth to="#top" id="logo" alt="easyASCII logo" />
+        <HashLink smooth to="#top" id="logo" aria-label="easyASCII logo" />
 
         <div className="overlay"></div>
 
@@ -74,7 +74,7 @@ export default function Layout() {
           </nav>
 
           {/* Light & dark mode button */}
-          <button id="btn-theme"></button>
+          <button id="btn-theme" aria-label="Change to light or dark mode"></button>
         </div>
         
       </header>
