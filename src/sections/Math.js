@@ -10,17 +10,17 @@ export default function Math() {
           <List category={math} />
         }
 
-        <h3>Fractions</h3>
+        <h2>Fractions</h2>
         {fractions &&
           <List category={fractions} />
         }
 
-        <h3>Equality / Inequality</h3>
+        <h2>Equality / Inequality</h2>
         {equality &&
           <List category={equality} />
         }
 
-        <h3>Misc</h3>
+        <h2>Misc</h2>
         {mathMisc &&
           <List category={mathMisc} />
         }

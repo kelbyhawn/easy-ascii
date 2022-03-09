@@ -10,12 +10,12 @@ export default function Popular() {
           <List category={popular} />
         }
 
-        <h3>Copyright Symbols</h3>
+        <h2>Copyright Symbols</h2>
         {copyright &&
           <List category={copyright} />
         }
 
-        <h3>Currency</h3>
+        <h2>Currency</h2>
         {currency &&
           <List category={currency} />
         }

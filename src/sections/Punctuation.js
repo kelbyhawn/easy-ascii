@@ -10,17 +10,17 @@ export default function Punctuation() {
           <List category={punctuation} /> 
         }
 
-        <h3>Spaces</h3>
+        <h2>Spaces</h2>
         {spaces &&
           <List category={spaces} />
         }
 
-        <h3>Dashes</h3>
+        <h2>Dashes</h2>
         {dashes &&
           <List category={dashes} />
         }
 
-        <h3>Quotes</h3>
+        <h2>Quotes</h2>
         {quotes &&
           <List category={quotes} />
         }

@@ -10,7 +10,7 @@ export default function Accent() {
           <List category={accentUppercase} /> 
         }
 
-        <h3>Lowercase</h3>
+        <h2>Lowercase</h2>
         {accentLowercase &&
           <List category={accentLowercase} />
         }

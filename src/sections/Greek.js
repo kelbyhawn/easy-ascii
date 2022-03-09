@@ -10,12 +10,12 @@ export default function Greek() {
           <List category={greekUppercase} />
         }
 
-        <h3>Lowercase</h3>
+        <h2>Lowercase</h2>
         {greekLowercase &&
           <List category={greekLowercase} />
         }
 
-        <h3>Symbols</h3>
+        <h2>Symbols</h2>
         {greekSymbols &&
           <List category={greekSymbols} />
         }
