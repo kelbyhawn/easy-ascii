@@ -17,7 +17,7 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 ## Categories
 
 - [Popular ASCII Codes](https://easyascii.com/#popular)
-  - Copyright Symbols 
+  - Copyright Symbols
   - Currency
 - [Punctuation](https://easyascii.com/#punctuation)
   - Spaces
@@ -53,10 +53,9 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 - [React Router](https://www.npmjs.com/package/react-router)
 - [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
-- [smoothscroll-polyfill](https://www.npmjs.com/package/smoothscroll-polyfill) - Scroll Behavior polyfill.
 - [Sass](https://sass-lang.com) - CSS with superpowers.
 
 
-## License 
+## License
 
 MIT - [View license](https://github.com/kelbyhawn/easy-ascii/blob/master/LICENSE)
