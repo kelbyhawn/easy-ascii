@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
-  
+
 @import 'variables'
 @import 'mixins'
 @import 'animation'
@@ -7,16 +7,16 @@
 // light theme colors
 @mixin light-theme
   --text-color: #3e3e3e
-  --bg-color: #fafafa
+  --bg-color: #ffffff
   --bg-color-rgb: 250, 250, 250
   --secondary-color: #dbdbdb
   --btn-bg-color: #3e3e3e
-  --btn-icon: url("/assets/icon-moon.svg") 
+  --btn-icon: url("/assets/icon-moon.svg")
   --logo: url("/assets/logo-easyascii.svg")
 
 // dark theme colors
 @mixin dark-theme
-  --text-color: #dadada
+  --text-color: #e7e7e7
   --bg-color: #303030
   --bg-color-rgb: 48, 48, 48
   --secondary-color: #757575
@@ -26,10 +26,10 @@
 
 :root
   @include light-theme
-  
+
   &.dark
     @include dark-theme
-    
+
 @media (prefers-color-scheme: dark)
   :root
     @include dark-theme
@@ -57,7 +57,7 @@ h1, h2, h3
   width: 230px
   color: var(--text-color)
 
-  @media screen and (max-width: $width-md) 
+  @media screen and (max-width: $width-md)
     width: 100%
     display: block
     margin-bottom: 1.5em
@@ -72,7 +72,7 @@ h1
 h2
   font-size: 1em
   font-weight: 400
-           
+
 a
   color: var(--text-color)
   text-decoration: none
@@ -107,7 +107,7 @@ a
       margin-right: 2px
       vertical-align: bottom
 
-  &:hover 
+  &:hover
     span
       color: red
 
@@ -123,12 +123,12 @@ code
     background: var(--secondary-color)
     text-shadow: 0 1px 0 var(--bg-color)
 
-.hide 
+.hide
   display: none
 
-  
 
-// Nav ---------------------------------------- 
+
+// Nav ----------------------------------------
 header
   z-index: 1
   background: var(--bg-color)
@@ -141,7 +141,7 @@ header
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-sm) 
+  @media screen and (max-width: $width-sm)
     display: block
     padding: 0
 
@@ -157,7 +157,7 @@ header
     display: inline-block
     background: var(--logo) center no-repeat
 
-    @media screen and (max-width: $width-sm) 
+    @media screen and (max-width: $width-sm)
       margin: 1em
 
   button
@@ -173,8 +173,8 @@ header
     cursor: pointer
     line-height: 0
 
-    &:before 
-      content: var(--btn-icon) 
+    &:before
+      content: var(--btn-icon)
 
     @media screen and (max-width: $width-sm)
       position: absolute
@@ -201,7 +201,7 @@ header
 
       ul
         animation: nudge .6s ease-in-out .7s 1
-            
+
     li
       display: inline
       margin-right: 1.5em
@@ -238,12 +238,12 @@ header
       background: -webkit-linear-gradient(to right, var(--bg-color) 0%, rgba(var(--bg-color-rgb),0) 4%, rgba(var(--bg-color-rgb),0) 50%, rgba(var(--bg-color-rgb),0) 93%, var(--bg-color) 100%)
       background: linear-gradient(to right, var(--bg-color) 0%, rgba(var(--bg-color-rgb),0) 4%, rgba(var(--bg-color-rgb),0) 50%, rgba(var(--bg-color-rgb),0) 93%, var(--bg-color) 100%)
 
-// Main ---------------------------------------- 
+// Main ----------------------------------------
 main
   max-width: 960px
   padding: 0 1em
-  margin: 0 auto 1em      
-         
+  margin: 0 auto 1em
+
 section
   padding-top: 10em
   @include inline-flex
@@ -254,7 +254,7 @@ section
     @include inline-flex
     margin: 0 0 2em
 
-    @media screen and (max-width: $width-md) 
+    @media screen and (max-width: $width-md)
       margin: 0 auto 2em
 
   ul
@@ -328,7 +328,7 @@ section
 .number
   margin-right: 1.75em
 
-  @media screen and (max-width: $width-sm) 
+  @media screen and (max-width: $width-sm)
     margin-right: 0
 
 .name
@@ -337,9 +337,9 @@ section
   margin-top: -2px
   cursor: default
 
-  @media screen and (max-width: $width-sm) 
+  @media screen and (max-width: $width-sm)
     display: none
-   
+
 
 
 // Footer ----------------------------------------
@@ -347,19 +347,17 @@ footer
   width: 100%
   padding: 0 1em
   margin: 7em auto 1em
-  font-size: .75em  
+  font-size: .75em
   color: var(--text-color)
   @include inline-flex
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-md) 
+  @media screen and (max-width: $width-md)
     margin-top: 0
 
   a
     color: var(--text-color)
-  
+
     &:hover
       color: red
-  
-  
