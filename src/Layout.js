@@ -15,13 +15,19 @@ export default function Layout() {
     const button = document.querySelector("#btn-theme");
 
     // Change theme on click
-    button.addEventListener("click", () => { 
+    const handleClick = () => {
       if (prefersDarkTheme.matches) {
         document.documentElement.classList.toggle("light");
       } else {
         document.documentElement.classList.toggle("dark");
       }
-    })
+    };
+
+    button.addEventListener("click", handleClick);
+
+    return () => {
+      button.removeEventListener("click", handleClick);
+    };
   }, []);
 
   // Show Back to top button
