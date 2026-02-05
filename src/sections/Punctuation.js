@@ -6,25 +6,17 @@ export default function Punctuation() {
     <>
       <section id="punctuation">
         <h1>Punctuation</h1>
-        {punctuation &&
-          <List category={punctuation} /> 
-        }
+        {punctuation && <List category={punctuation} />}
 
         <h2>Spaces</h2>
-        {spaces &&
-          <List category={spaces} />
-        }
+        {spaces && <List category={spaces} />}
 
         <h2>Dashes</h2>
-        {dashes &&
-          <List category={dashes} />
-        }
+        {dashes && <List category={dashes} />}
 
         <h2>Quotes</h2>
-        {quotes &&
-          <List category={quotes} />
-        }
+        {quotes && <List category={quotes} />}
       </section>
     </>
-  )
+  );
 }

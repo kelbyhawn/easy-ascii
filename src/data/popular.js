@@ -68,7 +68,6 @@ const popular = [
   },
 ];
 
-
 // Copyright Symbols
 const copyright = [
   {
@@ -90,7 +89,6 @@ const copyright = [
     number: "&#153;",
   },
 ];
-
 
 // Currency
 const currency = [
@@ -133,4 +131,3 @@ const currency = [
 ];
 
 export { popular, copyright, currency };
-  

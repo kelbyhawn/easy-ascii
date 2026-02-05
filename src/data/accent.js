@@ -408,4 +408,4 @@ const accentLowercase = [
   },
 ];
 
-export { accentUppercase, accentLowercase };  
+export { accentUppercase, accentLowercase };

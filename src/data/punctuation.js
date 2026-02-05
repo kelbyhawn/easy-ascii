@@ -32,7 +32,6 @@ const punctuation = [
   },
 ];
 
-
 // Spaces
 const spaces = [
   {
@@ -48,7 +47,6 @@ const spaces = [
     number: "&#8195;",
   },
 ];
-
 
 // Dashes
 const dashes = [
@@ -143,4 +141,3 @@ const quotes = [
 ];
 
 export { punctuation, spaces, dashes, quotes };
-  
