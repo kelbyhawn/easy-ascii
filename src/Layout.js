@@ -41,7 +41,7 @@ export default function Layout() {
   function handleBackToTopClick() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }
 
@@ -53,49 +53,71 @@ export default function Layout() {
         <div className="overlay"></div>
 
         <div className="wrapper">
-          <nav>     
+          <nav>
             <ul>
               <li>
-                <HashLink smooth to="#popular">Popular</HashLink>
+                <HashLink smooth to="#popular">
+                  Popular
+                </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#punctuation">Punctuation</HashLink>
+                <HashLink smooth to="#punctuation">
+                  Punctuation
+                </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#accent">Accented Characters</HashLink>
+                <HashLink smooth to="#accent">
+                  Accented Characters
+                </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#greek">Greek</HashLink>
+                <HashLink smooth to="#greek">
+                  Greek
+                </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#math">Math</HashLink>
+                <HashLink smooth to="#math">
+                  Math
+                </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#arrows">Arrows</HashLink>
+                <HashLink smooth to="#arrows">
+                  Arrows
+                </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#fun">Fun</HashLink>
+                <HashLink smooth to="#fun">
+                  Fun
+                </HashLink>
               </li>
             </ul>
           </nav>
 
           {/* Light & dark mode button */}
-          <button id="btn-theme" aria-label="Change to light or dark mode"></button>
+          <button
+            id="btn-theme"
+            aria-label="Change to light or dark mode"
+          ></button>
         </div>
-        
       </header>
 
-      <main>   
+      <main>
         <Main />
 
-        {isScrolling &&
+        {isScrolling && (
           <button className="back-to-top" onClick={handleBackToTopClick}>
             <span>↑</span> Back to top
-          </button>}
+          </button>
+        )}
       </main>
 
       <footer>
-        <p>©{year} easyASCII • Made by <a href="https://kelbyhawn.com" target="_blank" rel="noreferrer">Kelby Hawn</a></p>
+        <p>
+          ©{year} easyASCII • Made by{" "}
+          <a href="https://kelbyhawn.com" target="_blank" rel="noreferrer">
+            Kelby Hawn
+          </a>
+        </p>
       </footer>
     </>
   );

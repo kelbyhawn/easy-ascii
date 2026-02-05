@@ -6,15 +6,11 @@ export default function Accent() {
     <>
       <section id="accent">
         <h1>Accented Characters</h1>
-        {accentUppercase &&
-          <List category={accentUppercase} /> 
-        }
+        {accentUppercase && <List category={accentUppercase} />}
 
         <h2>Lowercase</h2>
-        {accentLowercase &&
-          <List category={accentLowercase} />
-        }
+        {accentLowercase && <List category={accentLowercase} />}
       </section>
     </>
-  )
+  );
 }

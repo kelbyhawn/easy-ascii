@@ -323,4 +323,3 @@ const greekSymbols = [
 ];
 
 export { greekUppercase, greekLowercase, greekSymbols };
-  
