@@ -1,9 +1,7 @@
 // Components
 import ListItem from "./ListItem";
 
-export default function List(props) {
-  const { category } = props;
-
+export default function List({ category }) {
   return (
     <div>
       <ul className="symbol">
