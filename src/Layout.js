@@ -1,41 +1,43 @@
 // Dependencies
 import { useEffect, useState } from "react";
-import { HashLink } from "react-router-hash-link";
 
 // Section Components
-import Main from "./Main";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import BackToTopButton from "./components/BackToTopButton";
 
 export default function Layout() {
-  const [isScrolling, setIsScrolling] = useState(false);
-  const year = new Date().getFullYear();
+  // Change theme (light/dark)
+  const [theme, setTheme] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light",
+  );
 
-  // Toggle light & dark theme
   useEffect(() => {
-    const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const button = document.querySelector("#btn-theme");
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(theme);
+  }, [theme]);
 
-    // Change theme on click
-    const handleClick = () => {
-      if (prefersDarkTheme.matches) {
-        document.documentElement.classList.toggle("light");
-      } else {
-        document.documentElement.classList.toggle("dark");
-      }
-    };
-
-    button.addEventListener("click", handleClick);
-
-    return () => {
-      button.removeEventListener("click", handleClick);
-    };
-  }, []);
+  function handleThemeChange() {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  }
 
   // Show Back to top button
+  const [isScrolling, setIsScrolling] = useState(false);
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) setIsScrolling(true);
+    function handleScroll() {
+      if (window.scrollY > 300) setIsScrolling(true);
       else setIsScrolling(false);
-    });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   function handleBackToTopClick() {
@@ -47,78 +49,15 @@ export default function Layout() {
 
   return (
     <>
-      <header>
-        <HashLink smooth to="#top" id="logo" aria-label="easyASCII logo" />
-
-        <div className="overlay"></div>
-
-        <div className="wrapper">
-          <nav>
-            <ul>
-              <li>
-                <HashLink smooth to="#popular">
-                  Popular
-                </HashLink>
-              </li>
-              <li>
-                <HashLink smooth to="#punctuation">
-                  Punctuation
-                </HashLink>
-              </li>
-              <li>
-                <HashLink smooth to="#accent">
-                  Accented Characters
-                </HashLink>
-              </li>
-              <li>
-                <HashLink smooth to="#greek">
-                  Greek
-                </HashLink>
-              </li>
-              <li>
-                <HashLink smooth to="#math">
-                  Math
-                </HashLink>
-              </li>
-              <li>
-                <HashLink smooth to="#arrows">
-                  Arrows
-                </HashLink>
-              </li>
-              <li>
-                <HashLink smooth to="#fun">
-                  Fun
-                </HashLink>
-              </li>
-            </ul>
-          </nav>
-
-          {/* Light & dark mode button */}
-          <button
-            id="btn-theme"
-            aria-label="Change to light or dark mode"
-          ></button>
-        </div>
-      </header>
-
-      <main>
-        <Main />
-
-        {isScrolling && (
-          <button className="back-to-top" onClick={handleBackToTopClick}>
-            <span>↑</span> Back to top
-          </button>
-        )}
-      </main>
-
-      <footer>
-        <p>
-          ©{year} easyASCII • Made by{" "}
-          <a href="https://kelbyhawn.com" target="_blank" rel="noreferrer">
-            Kelby Hawn
-          </a>
-        </p>
-      </footer>
+      <Header theme={theme} onClickTheme={handleThemeChange} />
+      <Main />
+      <Footer />
+      {isScrolling && (
+        <BackToTopButton
+          isScrolling={isScrolling}
+          onClickBackToTop={handleBackToTopClick}
+        />
+      )}
     </>
   );
 }

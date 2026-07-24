@@ -9,8 +9,6 @@
   --bg-color-rgb: 250, 250, 250
   --secondary-color: #dbdbdb
   --btn-bg-color: #3e3e3e
-  --btn-icon: url("/assets/icon-moon.svg")
-  --logo: url("/assets/logo-easyascii.svg")
 
 // dark theme colors
 @mixin dark-theme
@@ -19,8 +17,6 @@
   --bg-color-rgb: 48, 48, 48
   --secondary-color: #757575
   --btn-bg-color: #e7e7e7
-  --btn-icon: url("/assets/icon-sun.svg")
-  --logo: url("/assets/logo-easyascii-light.svg")
 
 :root
   @include light-theme
@@ -154,7 +150,6 @@ header
     width: 120px
     height: 30px
     display: inline-block
-    background: var(--logo) center no-repeat
 
     @media screen and (max-width: $width-sm)
       margin: 1em
@@ -171,9 +166,6 @@ header
     border-radius: 100%
     cursor: pointer
     line-height: 0
-
-    &:before
-      content: var(--btn-icon)
 
     @media screen and (max-width: $width-sm)
       position: absolute
@@ -229,7 +221,7 @@ header
       position: absolute
       z-index: 100
       height: 1em
-      top: 4.5em
+      top: 4.25em
       right: 0
       bottom: 0
       width: 100%
