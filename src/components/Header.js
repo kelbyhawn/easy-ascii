@@ -1,6 +1,7 @@
 import { HashLink } from "react-router-hash-link";
 import Image from "next/image";
 import ThemeButton from "./ThemeButton";
+import { HEADER_LINKS } from "../data/headerLinks";
 
 // Assets
 import logoLight from "../assets/logo-easyascii-light.svg";
@@ -13,6 +14,7 @@ export default function Header({ theme, onClickTheme }) {
         <Image
           src={theme === "light" ? logoDark : logoLight}
           alt="easyASCII logo"
+          loading="eager"
           width={120}
           height={30}
         />
@@ -21,41 +23,13 @@ export default function Header({ theme, onClickTheme }) {
       <div className="wrapper">
         <nav>
           <ul>
-            <li>
-              <HashLink smooth to="#popular">
-                Popular
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#punctuation">
-                Punctuation
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#accent">
-                Accented Characters
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#greek">
-                Greek
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#math">
-                Math
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#arrows">
-                Arrows
-              </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="#fun">
-                Fun
-              </HashLink>
-            </li>
+            {HEADER_LINKS.map((link) => (
+              <li key={link.name}>
+                <HashLink smooth to={link.href}>
+                  {link.name}
+                </HashLink>
+              </li>
+            ))}
           </ul>
         </nav>
         <ThemeButton theme={theme} onClickTheme={onClickTheme} />
