@@ -4,7 +4,7 @@ import List from "../components/List";
 export default function Popular() {
   return (
     <section id="popular">
-      <h1>Popular ASCII</h1>
+      <h1>Popular</h1>
       {popular && <List category={popular} />}
 
       <h2>Copyright Symbols</h2>
