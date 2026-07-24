@@ -1,5 +1,5 @@
 // Punctuation
-const punctuation = [
+const PUNCTUATION = [
   {
     name: "dagger",
     symbol: "†",
@@ -33,7 +33,7 @@ const punctuation = [
 ];
 
 // Spaces
-const spaces = [
+const SPACES = [
   {
     name: "en space",
     symbol: " ",
@@ -49,7 +49,7 @@ const spaces = [
 ];
 
 // Dashes
-const dashes = [
+const DASHES = [
   {
     name: "en dash",
     symbol: "–",
@@ -65,7 +65,7 @@ const dashes = [
 ];
 
 // Quotes
-const quotes = [
+const QUOTES = [
   {
     name: "left single quotation",
     symbol: "‘",
@@ -140,4 +140,4 @@ const quotes = [
   },
 ];
 
-export { punctuation, spaces, dashes, quotes };
+export { PUNCTUATION, SPACES, DASHES, QUOTES };

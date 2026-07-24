@@ -1,5 +1,5 @@
 // Arrows
-const arrows = [
+const ARROWS = [
   {
     name: "left arrow",
     symbol: "←",
@@ -63,7 +63,7 @@ const arrows = [
 ];
 
 // Hands
-const hands = [
+const HANDS = [
   {
     name: "filled left index finger",
     symbol: "☚",
@@ -102,4 +102,4 @@ const hands = [
   },
 ];
 
-export { arrows, hands };
+export { ARROWS, HANDS };

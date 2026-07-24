@@ -1,5 +1,5 @@
 // Popular
-const popular = [
+const POPULAR = [
   {
     name: "non-breaking space",
     symbol: " ",
@@ -66,10 +66,22 @@ const popular = [
     word: "-",
     number: "&#9734;",
   },
+  {
+    name: "left arrow",
+    symbol: "←",
+    word: "&larr;",
+    number: "&#8592;",
+  },
+  {
+    name: "right arrow",
+    symbol: "→",
+    word: "&rarr;",
+    number: "&#8594;",
+  },
 ];
 
 // Copyright Symbols
-const copyright = [
+const COPYRIGHT = [
   {
     name: "copyright",
     symbol: "©",
@@ -91,7 +103,7 @@ const copyright = [
 ];
 
 // Currency
-const currency = [
+const CURRENCY = [
   {
     name: "currency",
     symbol: "¤",
@@ -130,4 +142,4 @@ const currency = [
   },
 ];
 
-export { popular, copyright, currency };
+export { POPULAR, COPYRIGHT, CURRENCY };
