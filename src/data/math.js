@@ -1,5 +1,5 @@
 // Math
-const math = [
+const MATH = [
   {
     name: "plus sign",
     symbol: "+",
@@ -39,7 +39,7 @@ const math = [
 ];
 
 // Fractions
-const fractions = [
+const FRACTIONS = [
   {
     name: "one fourth",
     symbol: "¼",
@@ -61,7 +61,7 @@ const fractions = [
 ];
 
 // Equality / Inequality
-const equality = [
+const COMPARISON_OPERATORS = [
   {
     name: "less than",
     symbol: "<",
@@ -119,7 +119,7 @@ const equality = [
 ];
 
 // Misc
-const mathMisc = [
+const MATH_MISC = [
   {
     name: "degree",
     symbol: "°",
@@ -170,4 +170,4 @@ const mathMisc = [
   },
 ];
 
-export { math, fractions, equality, mathMisc };
+export { MATH, FRACTIONS, COMPARISON_OPERATORS, MATH_MISC };

@@ -1,17 +1,17 @@
-import { greekUppercase, greekLowercase, greekSymbols } from "../data/greek";
+import { GREEK_UPPERCASE, GREEK_LOWERCASE, GREEK_SYMBOLS } from "../data/greek";
 import List from "../components/List";
 
 export default function Greek() {
   return (
     <section id="greek">
       <h1>Greek Alphabet</h1>
-      {greekUppercase && <List category={greekUppercase} />}
+      {GREEK_UPPERCASE && <List category={GREEK_UPPERCASE} />}
 
       <h2>Lowercase</h2>
-      {greekLowercase && <List category={greekLowercase} />}
+      {GREEK_LOWERCASE && <List category={GREEK_LOWERCASE} />}
 
       <h2>Symbols</h2>
-      {greekSymbols && <List category={greekSymbols} />}
+      {GREEK_SYMBOLS && <List category={GREEK_SYMBOLS} />}
     </section>
   );
 }

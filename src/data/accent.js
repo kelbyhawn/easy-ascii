@@ -1,5 +1,5 @@
 // Accented Characters
-const accentUppercase = [
+const ACCENT_UPPERCASE = [
   {
     name: "A, grave",
     symbol: "À",
@@ -201,7 +201,7 @@ const accentUppercase = [
 ];
 
 // Lowercase
-const accentLowercase = [
+const ACCENT_LOWERCASE = [
   {
     name: "a, grave",
     symbol: "à",
@@ -408,4 +408,4 @@ const accentLowercase = [
   },
 ];
 
-export { accentUppercase, accentLowercase };
+export { ACCENT_UPPERCASE, ACCENT_LOWERCASE };

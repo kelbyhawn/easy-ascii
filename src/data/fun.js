@@ -1,5 +1,5 @@
 // Fun
-const fun = [
+const FUN = [
   {
     name: "smiley face",
     symbol: "☺",
@@ -45,7 +45,7 @@ const fun = [
 ];
 
 // Weather
-const weather = [
+const WEATHER = [
   {
     name: "sun",
     symbol: "☀",
@@ -79,7 +79,7 @@ const weather = [
 ];
 
 // Celestial
-const celestial = [
+const CELESTIAL = [
   {
     name: "waxing crescent moon",
     symbol: "☽",
@@ -125,7 +125,7 @@ const celestial = [
 ];
 
 // Cards
-const cards = [
+const CARDS = [
   {
     name: "heart (black)",
     symbol: "♥",
@@ -177,7 +177,7 @@ const cards = [
 ];
 
 // Chess
-const chess = [
+const CHESS = [
   {
     name: "King (black)",
     symbol: "♚",
@@ -253,7 +253,7 @@ const chess = [
 ];
 
 // Music
-const music = [
+const MUSIC = [
   {
     name: "quarter note",
     symbol: "♩",
@@ -299,7 +299,7 @@ const music = [
 ];
 
 // Checks
-const checks = [
+const CHECKS = [
   {
     name: "check mark",
     symbol: "✓",
@@ -357,7 +357,7 @@ const checks = [
 ];
 
 // Office
-const office = [
+const OFFICE = [
   {
     name: "telephone (filled)",
     symbol: "☎",
@@ -433,7 +433,7 @@ const office = [
 ];
 
 // Misc
-const funMisc = [
+const FUN_MISC = [
   {
     name: "Caduceus",
     symbol: "☤",
@@ -551,13 +551,13 @@ const funMisc = [
 ];
 
 export {
-  fun,
-  weather,
-  celestial,
-  cards,
-  chess,
-  music,
-  checks,
-  office,
-  funMisc,
+  FUN,
+  WEATHER,
+  CELESTIAL,
+  CARDS,
+  CHESS,
+  MUSIC,
+  CHECKS,
+  OFFICE,
+  FUN_MISC,
 };

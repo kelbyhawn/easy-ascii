@@ -1,20 +1,20 @@
-import { math, fractions, equality, mathMisc } from "../data/math";
+import { MATH, FRACTIONS, COMPARISON_OPERATORS, MATH_MISC } from "../data/math";
 import List from "../components/List";
 
 export default function Math() {
   return (
     <section id="math">
       <h1>Math</h1>
-      {math && <List category={math} />}
+      {MATH && <List category={MATH} />}
 
       <h2>Fractions</h2>
-      {fractions && <List category={fractions} />}
+      {FRACTIONS && <List category={FRACTIONS} />}
 
-      <h2>Equality / Inequality</h2>
-      {equality && <List category={equality} />}
+      <h2>Comparison Operators</h2>
+      {COMPARISON_OPERATORS && <List category={COMPARISON_OPERATORS} />}
 
       <h2>Misc</h2>
-      {mathMisc && <List category={mathMisc} />}
+      {MATH_MISC && <List category={MATH_MISC} />}
     </section>
   );
 }

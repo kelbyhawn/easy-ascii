@@ -1,5 +1,5 @@
 // Greek Characters
-const greekUppercase = [
+const GREEK_UPPERCASE = [
   {
     name: "Alpha",
     symbol: "Α",
@@ -147,7 +147,7 @@ const greekUppercase = [
 ];
 
 // Lowercase
-const greekLowercase = [
+const GREEK_LOWERCASE = [
   {
     name: "alpha",
     symbol: "α",
@@ -301,7 +301,7 @@ const greekLowercase = [
 ];
 
 // Symbols
-const greekSymbols = [
+const GREEK_SYMBOLS = [
   {
     name: "theta symbol",
     symbol: "ϑ",
@@ -322,4 +322,4 @@ const greekSymbols = [
   },
 ];
 
-export { greekUppercase, greekLowercase, greekSymbols };
+export { GREEK_UPPERCASE, GREEK_LOWERCASE, GREEK_SYMBOLS };

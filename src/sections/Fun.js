@@ -1,13 +1,13 @@
 import {
-  fun,
-  weather,
-  celestial,
-  cards,
-  chess,
-  music,
-  checks,
-  office,
-  funMisc,
+  FUN,
+  WEATHER,
+  CELESTIAL,
+  CARDS,
+  CHESS,
+  MUSIC,
+  CHECKS,
+  OFFICE,
+  FUN_MISC,
 } from "../data/fun";
 import List from "../components/List";
 
@@ -15,31 +15,31 @@ export default function Fun() {
   return (
     <section id="fun">
       <h1>Fun</h1>
-      {fun && <List category={fun} />}
+      {FUN && <List category={FUN} />}
 
       <h2>Weather</h2>
-      {weather && <List category={weather} />}
+      {WEATHER && <List category={WEATHER} />}
 
       <h2>Celestial</h2>
-      {celestial && <List category={celestial} />}
+      {CELESTIAL && <List category={CELESTIAL} />}
 
       <h2>Card Suits</h2>
-      {cards && <List category={cards} />}
+      {CARDS && <List category={CARDS} />}
 
       <h2>Chess Pieces</h2>
-      {chess && <List category={chess} />}
+      {CHESS && <List category={CHESS} />}
 
       <h2>Music Notes</h2>
-      {music && <List category={music} />}
+      {MUSIC && <List category={MUSIC} />}
 
       <h2>Check Marks</h2>
-      {checks && <List category={checks} />}
+      {CHECKS && <List category={CHECKS} />}
 
       <h2>Office</h2>
-      {office && <List category={office} />}
+      {OFFICE && <List category={OFFICE} />}
 
       <h2>Misc</h2>
-      {funMisc && <List category={funMisc} />}
+      {FUN_MISC && <List category={FUN_MISC} />}
     </section>
   );
 }

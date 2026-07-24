@@ -1,14 +1,14 @@
-import { arrows, hands } from "../data/arrows";
+import { ARROWS, HANDS } from "../data/arrows";
 import List from "../components/List";
 
 export default function Arrows() {
   return (
     <section id="arrows">
       <h1>Arrows</h1>
-      {arrows && <List category={arrows} />}
+      {ARROWS && <List category={ARROWS} />}
 
       <h2>Hands</h2>
-      {hands && <List category={hands} />}
+      {HANDS && <List category={HANDS} />}
     </section>
   );
 }
