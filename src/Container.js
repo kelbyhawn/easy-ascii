@@ -1,5 +1,6 @@
 // Dependencies
 import { useEffect, useState } from "react";
+import ClipboardJS from "clipboard";
 
 // Section Components
 import Header from "./components/Header";
@@ -7,7 +8,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import BackToTopButton from "./components/BackToTopButton";
 
-export default function Layout() {
+export default function Container() {
   // Change theme (light/dark)
   const [theme, setTheme] = useState(
     window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -46,6 +47,33 @@ export default function Layout() {
       behavior: "smooth",
     });
   }
+
+  // Click to copy
+  useEffect(() => {
+    const items = document.querySelectorAll("li.copyable");
+    const clipboard = new ClipboardJS(items);
+
+    clipboard.on("success", (e) => {
+      // add tooltip
+      e.trigger.insertAdjacentHTML(
+        "beforeend",
+        `<span class="tooltip">Copied!</span>`,
+      );
+      //debugger // use when working on tooltip css
+      // hide tooltip after 2 seconds
+      setTimeout(
+        () =>
+          document
+            .querySelectorAll(".tooltip")
+            .forEach((tooltip) => tooltip.remove()),
+        2000,
+      );
+
+      e.clearSelection();
+    });
+
+    clipboard.on("error", (e) => console.error(e));
+  }, []);
 
   return (
     <>
