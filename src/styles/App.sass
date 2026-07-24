@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
-
-@import 'variables'
-@import 'mixins'
-@import 'animation'
+@use 'variables'
+@use 'mixins'
+@use 'animation'
 
 // light theme colors
 @mixin light-theme
@@ -11,8 +9,6 @@
   --bg-color-rgb: 250, 250, 250
   --secondary-color: #dbdbdb
   --btn-bg-color: #3e3e3e
-  --btn-icon: url("/assets/icon-moon.svg")
-  --logo: url("/assets/logo-easyascii.svg")
 
 // dark theme colors
 @mixin dark-theme
@@ -21,8 +17,6 @@
   --bg-color-rgb: 48, 48, 48
   --secondary-color: #757575
   --btn-bg-color: #e7e7e7
-  --btn-icon: url("/assets/icon-sun.svg")
-  --logo: url("/assets/logo-easyascii-light.svg")
 
 :root
   @include light-theme
@@ -45,7 +39,7 @@ body
   background: var(--bg-color)
   color: var(--text-color)
   font-size: 16px
-  font-family: $font-family
+  font-family: variables.$font-family
   line-height: 1.4
   letter-spacing: .025em
   -webkit-text-size-adjust: none
@@ -57,7 +51,7 @@ h1, h2, h3
   width: 230px
   color: var(--text-color)
 
-  @media screen and (max-width: $width-md)
+  @media screen and (max-width: variables.$width-md)
     width: 100%
     display: block
     margin-bottom: 1.5em
@@ -76,13 +70,13 @@ h2
 a
   color: var(--text-color)
   text-decoration: none
-  @include transition($hover)
+  @include mixins.transition(variables.$hover)
 
   &:hover
     color: var(--text-color)
 
 .back-to-top
-  font-family: $font-family
+  font-family: variables.$font-family
   position: fixed
   bottom: 0
   right: 0
@@ -99,7 +93,7 @@ a
   span
     vertical-align: baseline
     font-size: 1em
-    @include transition($hover)
+    @include mixins.transition(variables.$hover)
 
     // Firefox styles
     @-moz-document url-prefix()
@@ -112,11 +106,11 @@ a
       color: red
 
 code
-  font-family: $code
+  font-family: variables.$code
   font-weight: bold
   vertical-align: bottom
   cursor: copy
-  @include transition($hover)
+  @include mixins.transition(variables.$hover)
 
   &:hover,
   &:active,
@@ -138,11 +132,11 @@ header
   position: fixed
   top: 0
   border-bottom: 1px solid var(--secondary-color)
-  @include inline-flex
+  @include mixins.inline-flex
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: variables.$width-sm)
     display: block
     padding: 0
 
@@ -156,16 +150,15 @@ header
     width: 120px
     height: 30px
     display: inline-block
-    background: var(--logo) center no-repeat
 
-    @media screen and (max-width: $width-sm)
+    @media screen and (max-width: variables.$width-sm)
       margin: 1em
 
   button
     width: 30px
     height: 30px
     background: var(--btn-bg-color)
-    font-family: $font-family
+    font-family: variables.$font-family
     font-size: .775em
     margin: 0 0 0 1.5em
     padding: .5em
@@ -174,10 +167,7 @@ header
     cursor: pointer
     line-height: 0
 
-    &:before
-      content: var(--btn-icon)
-
-    @media screen and (max-width: $width-sm)
+    @media screen and (max-width: variables.$width-sm)
       position: absolute
       top: 1em
       right: 1em
@@ -186,10 +176,10 @@ header
     position: relative
     margin-left: 10em
 
-    @media screen and (max-width: $width-md)
+    @media screen and (max-width: variables.$width-md)
       margin-left: 0
 
-    @media screen and (max-width: $width-sm)
+    @media screen and (max-width: variables.$width-sm)
       padding-bottom: 1em
       margin: 0
       white-space: nowrap
@@ -208,30 +198,30 @@ header
       margin-right: 1.5em
       font-size: .9em
 
-      @media screen and (max-width: $width-md)
+      @media screen and (max-width: variables.$width-md)
         font-size: .85em
 
-      @media screen and (max-width: $width-sm)
+      @media screen and (max-width: variables.$width-sm)
         &:first-child
           margin-left: 16px
 
       &:last-child
         margin-right: 0
 
-        @media screen and (max-width: $width-sm)
+        @media screen and (max-width: variables.$width-sm)
           margin-right: 32px
 
     a:hover
       box-shadow: 0 2px 0px var(--secondary-color)
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: variables.$width-sm)
     .overlay
       pointer-events: none /* ignore clicks */
       content: ""
       position: absolute
       z-index: 100
       height: 1em
-      top: 4.5em
+      top: 4.25em
       right: 0
       bottom: 0
       width: 100%
@@ -247,15 +237,15 @@ main
 
 section
   padding-top: 10em
-  @include inline-flex
+  @include mixins.inline-flex
   -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   & > div
-    @include inline-flex
+    @include mixins.inline-flex
     margin: 0 0 2em
 
-    @media screen and (max-width: $width-md)
+    @media screen and (max-width: variables.$width-md)
       margin: 0 auto 2em
 
   ul
@@ -316,7 +306,7 @@ section
       content: ']'
 
   code
-    font-family: $font-family
+    font-family: variables.$code
     font-weight: 400
     padding: 0 3px
 
@@ -329,7 +319,7 @@ section
 .number
   margin-right: 1.75em
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: variables.$width-sm)
     margin-right: 0
 
 .name
@@ -338,7 +328,7 @@ section
   margin-top: -2px
   cursor: default
 
-  @media screen and (max-width: $width-sm)
+  @media screen and (max-width: variables.$width-sm)
     display: none
 
 
@@ -350,11 +340,11 @@ footer
   margin: 7em auto 1em
   font-size: .75em
   color: var(--text-color)
-  @include inline-flex
+  @include mixins.inline-flex
   -ms-flex-pack: justify
   justify-content: space-between
 
-  @media screen and (max-width: $width-md)
+  @media screen and (max-width: variables.$width-md)
     margin-top: 0
 
   a

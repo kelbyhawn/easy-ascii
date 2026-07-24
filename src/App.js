@@ -7,16 +7,13 @@ import {
 } from "react-router-dom";
 
 // Layout Component
-import Layout from "./Layout";
-
-// Assets
-import "./styles/App.sass";
+import Container from "./Container";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Container />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
