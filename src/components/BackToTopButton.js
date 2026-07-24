@@ -1,11 +1,7 @@
-export default function BackToTopButton({ isScrolling, onClickBackToTop }) {
+export default function BackToTopButton({ onClickBackToTop }) {
   return (
-    <>
-      {isScrolling && (
-        <button className="back-to-top" onClick={onClickBackToTop}>
-          <span>↑</span> Back to top
-        </button>
-      )}
-    </>
+    <button className="back-to-top" onClick={onClickBackToTop}>
+      <span>↑</span> Back to top
+    </button>
   );
 }
