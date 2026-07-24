@@ -5,7 +5,7 @@ export default function Greek() {
   return (
     <>
       <section id="greek">
-        <h1>Greek Letters & Symbols</h1>
+        <h1>Greek Alphabet</h1>
         {greekUppercase && <List category={greekUppercase} />}
 
         <h2>Lowercase</h2>
