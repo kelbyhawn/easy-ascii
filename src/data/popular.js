@@ -66,6 +66,18 @@ const popular = [
     word: "-",
     number: "&#9734;",
   },
+  {
+    name: "left arrow",
+    symbol: "←",
+    word: "&larr;",
+    number: "&#8592;",
+  },
+  {
+    name: "right arrow",
+    symbol: "→",
+    word: "&rarr;",
+    number: "&#8594;",
+  },
 ];
 
 // Copyright Symbols
