@@ -1,5 +1,5 @@
 // Components
-import { HashLink } from "react-router-hash-link";
+import Link from "next/link";
 import Image from "next/image";
 import ThemeButton from "./ThemeButton";
 
@@ -13,7 +13,7 @@ import { HEADER_LINKS } from "../data/headerLinks";
 export default function Header({ theme, onClickTheme }) {
   return (
     <header>
-      <HashLink smooth to="#top" id="logo" aria-label="Logo home link">
+      <Link href="#top" id="logo" aria-label="Logo home link">
         <Image
           src={theme === "light" ? logoDark : logoLight}
           alt=""
@@ -21,16 +21,14 @@ export default function Header({ theme, onClickTheme }) {
           width={120}
           height={30}
         />
-      </HashLink>
+      </Link>
       <div className="overlay"></div>
       <div className="wrapper">
         <nav>
           <ul>
             {HEADER_LINKS.map((link) => (
               <li key={link.name}>
-                <HashLink smooth to={link.href}>
-                  {link.name}
-                </HashLink>
+                <Link href={link.href}>{link.name}</Link>
               </li>
             ))}
           </ul>
