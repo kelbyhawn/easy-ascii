@@ -48,8 +48,6 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 
 - [React](https://reactjs.org/) - A declarative, efficient, and flexible JavaScript library for building user interfaces.
 - [Next.js](https://nextjs.org/) - The React framework for the web.
-- [React Router](https://www.npmjs.com/package/react-router) - A user‑obsessed, standards‑focused, multi‑strategy router you can deploy anywhere.
-- [React Router Hash Link](https://github.com/rafgraph/react-router-hash-link) - Solution for React Router not scrolling to hash links.
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
 - [Sass](https://sass-lang.com) - CSS with superpowers.
 
