@@ -47,6 +47,7 @@ A simple, easy-to-use list of ASCII codes to copy and paste.
 ## Dependencies
 
 - [React](https://reactjs.org/) - A declarative, efficient, and flexible JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
 - [Next.js](https://nextjs.org/) - The React framework for the web.
 - [clipboard.js](https://clipboardjs.com/) - A modern approach to copy text to clipboard.
 - [Sass](https://sass-lang.com) - CSS with superpowers.
