@@ -5,7 +5,12 @@ import Image from "next/image";
 import iconMoon from "../assets/icon-moon.svg";
 import iconSun from "../assets/icon-sun.svg";
 
-export default function ThemeButton({ theme, onClickTheme }) {
+type ThemeButtonProps = {
+  theme: string;
+  onClickTheme: () => void;
+};
+
+export default function ThemeButton({ theme, onClickTheme }: ThemeButtonProps) {
   return (
     <button aria-label="Change theme" onClick={onClickTheme}>
       <Image

@@ -21,7 +21,7 @@ beforeAll(() => {
 test("items can be copied and show tooltip on click", async () => {
   // Mock Clipboard API so copy succeeds in jsdom
   Object.assign(navigator, {
-    clipboard: { writeText: jest.fn().mockResolvedValue() },
+    clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
   });
 
   render(<App />);

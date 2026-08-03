@@ -10,7 +10,12 @@ import logoDark from "../assets/logo-easyascii.svg";
 // Data
 import { HEADER_LINKS } from "../data/headerLinks";
 
-export default function Header({ theme, onClickTheme }) {
+type HeaderProps = {
+  theme: string;
+  onClickTheme: () => void;
+};
+
+export default function Header({ theme, onClickTheme }: HeaderProps) {
   return (
     <header>
       <Link href="#top" id="logo" aria-label="Logo home link">
