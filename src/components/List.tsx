@@ -1,7 +1,16 @@
 // Components
 import ListItem from "./ListItem";
 
-export default function List({ category }) {
+type ListProps = {
+  category: {
+    symbol: string;
+    word: string;
+    number: string;
+    name: string;
+  }[];
+};
+
+export default function List({ category }: ListProps) {
   return (
     <div>
       <ul className="symbol">

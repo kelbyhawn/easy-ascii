@@ -47,3 +47,7 @@ test("items can be copied and show tooltip on click", async () => {
 
   expect(screen.getByText("Copied!")).toHaveClass("tooltip");
 });
+function beforeAll(arg0: () => void) {
+  throw new Error("Function not implemented.");
+}
+

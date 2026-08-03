@@ -81,10 +81,7 @@ export default function Container() {
       <Main />
       <Footer />
       {isScrolling && (
-        <BackToTopButton
-          isScrolling={isScrolling}
-          onClickBackToTop={handleBackToTopClick}
-        />
+        <BackToTopButton onClickBackToTop={handleBackToTopClick} />
       )}
     </>
   );
