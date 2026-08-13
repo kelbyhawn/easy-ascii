@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import App from "../App";
+import Container from "../Container";
 
 beforeAll(() => {
   // jsdom does not implement window.matchMedia
@@ -24,7 +24,7 @@ test("items can be copied and show tooltip on click", async () => {
     clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
   });
 
-  render(<App />);
+  render(<Container />);
 
   // Get all copyable list items
   const copyableItems = screen

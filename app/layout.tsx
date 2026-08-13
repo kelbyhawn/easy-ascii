@@ -1,7 +1,7 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Lato } from "next/font/google";
 import "../src/styles/reset.css";
-import "../src/styles/App.sass";
+import "../src/styles/main.scss";
 
 const lato = Lato({
   weight: ["300", "400", "700"],
