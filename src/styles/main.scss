@@ -130,7 +130,7 @@ a {
 
 code {
   font-family: variables.$code;
-  font-weight: bold;
+  font-weight: 700;
   vertical-align: bottom;
   cursor: copy;
   @include mixins.transition(variables.$hover);
@@ -386,7 +386,7 @@ section {
 
   code {
     font-family: variables.$code;
-    font-weight: 400;
+    font-weight: 700;
     padding: 0 3px;
   }
 }
