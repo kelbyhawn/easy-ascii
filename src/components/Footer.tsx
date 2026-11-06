@@ -5,9 +5,7 @@ export default function Footer() {
     <footer>
       <p>
         ©{year} easyASCII • Made by{" "}
-        <a href="https://kelbyhawn.com" target="_blank" rel="noreferrer">
-          Kelby Hawn
-        </a>
+        <a href="https://kelbyhawn.com">Kelby Hawn</a>
       </p>
     </footer>
   );
